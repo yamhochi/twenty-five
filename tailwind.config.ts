@@ -51,6 +51,7 @@ export default {
 				// Add any custom fonts here
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
+				"custom-styled": ['"Space Grotesk"', 'sans-serif'],
 			},
 			transitionProperty: {
 				height: "height",

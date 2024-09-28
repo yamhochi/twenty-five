@@ -6,5 +6,7 @@ updatedDate: "14 August 2023"
 coverImage:
   src: "./cover.png"
   alt: "Astro build wallpaper"
+  width: "1280"
+  height: "1450"
 tags: ["test", "image"]
 ---
