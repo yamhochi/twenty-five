@@ -13,48 +13,6 @@ const showcasePosts = allPostsByDate.filter((post) => post.data.tags.includes("s
 const archivePosts = allPostsByDate.filter((post) => post.data.tags.includes("archive"));
 const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("musings"));
 
-// const cactusTech: { desc: string; href: string; title: string }[] = [
-// 	{
-// 		desc: "Build fast websites, faster.",
-// 		href: "https://astro.build",
-// 		title: "Astro",
-// 	},
-// 	{
-// 		desc: "Rapidly build modern websites without ever leaving your HTML.",
-// 		href: "https://tailwindcss.com",
-// 		title: "Tailwind CSS",
-// 	},
-// 	{
-// 		desc: "Simple and easy-to-use markup language.",
-// 		href: "https://www.markdownguide.org/",
-// 		title: "Markdown",
-// 	},
-// 	{
-// 		desc: "Markdown for the component era.",
-// 		href: "https://mdxjs.com/",
-// 		title: "MDX",
-// 	},
-// 	{
-// 		desc: "Generating png Open Graph images for blog posts.",
-// 		href: "https://github.com/vercel/satori",
-// 		title: "Satori",
-// 	},
-// 	{
-// 		desc: "A fully static search library.",
-// 		href: "https://pagefind.app/",
-// 		title: "Pagefind",
-// 	},
-// 	{
-// 		desc: "An easy to use Icon component for Astro.",
-// 		href: "https://github.com/natemoo-re/astro-icon#readme",
-// 		title: "Astro Icon",
-// 	},
-// 	{
-// 		desc: "Highly customisable source code & syntax highlighter",
-// 		href: "https://expressive-code.com/",
-// 		title: "Expressive Code",
-// 	},
-// ];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -68,20 +26,7 @@ const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("mus
 		<SocialList />
 	</section>
 
-	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
-		<ul class="space-y-4">
-			{
-				allPostsByDate.map((p) => (
-					<li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
-						{/* @ts-ignore-next-line - issue with -> @astrojs/check@0.9.3 */}
-						<PostPreview post={p} />
-					</li>
-				))
-			}
-		</ul>
-	</section>
-
+	<!-- Showcase -->
 	<section aria-label="Showcase list" class="mt-[120px]">
 		<h2 class="title mb-8 font-custom-styled text-2xl">Showcase</h2>
 		<p class="mb-8 text-base">
@@ -97,27 +42,35 @@ const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("mus
 				}
 			</ul>
 		</p>
-		</section>
+	</section>
 
-
-	<!-- <section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
-		<dl class="space-y-4">
+	<!-- Musing -->
+	<section aria-label="Musing list" class="mt-16">
+		<h2 class="title mb-8 font-custom-styled text-2xl">Archived Projects</h2>
+		<ul class="space-y-4 sm:space-y-2">
 			{
-				cactusTech.map(({ desc, href, title }) => (
-					<div class="flex flex-col gap-2 sm:flex-row">
-						<dt>
-							<span class="flex">
-								<a class="cactus-link" href={href} rel="noreferrer" target="_blank">
-									{title}
-								</a>
-								:
-							</span>
-						</dt>
-						<dd>{desc}</dd>
-					</div>
+				archivePosts.map((p) => (
+					<li class="flex flex-row gap-x-2">
+						<PostPreview post={p} />
+					</li>
 				))
 			}
-		</dl>
-	</section> -->
+		</ul>
+	</section>
+
+	<!-- Archives -->
+	<section aria-label="Archive list" class="mt-16">
+		<h2 class="title mb-8 font-custom-styled text-2xl">Product & Tech Musings</h2>
+		<ul class="space-y-4 sm:space-y-2">
+			{
+				musingPosts.map((p) => (
+					<li class="flex flex-row gap-x-2 ">
+						<PostPreview post={p} />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+
 </PageLayout>
