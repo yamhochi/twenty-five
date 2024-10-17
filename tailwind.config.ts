@@ -49,12 +49,8 @@ export default {
 			},
 			fontFamily: {
 				// Add any custom fonts here
-				// sans: [...fontFamily.sans],
-				// sans: ['"Poppins"', ...defaultTheme.fontFamily.sans],
-				sans : [ '"Syne"','Helvetica', 'Arial', 'sans-serif'],
+				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
-				mono: ['"Space Grotesk"', 'sans-serif'],
-				// display: ['"Space Grotesk"', 'sans-serif'],
 				"custom-styled": ['"Space Grotesk"', 'sans-serif'],
 			},
 			transitionProperty: {
