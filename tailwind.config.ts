@@ -32,7 +32,7 @@ export default {
 					"@apply underline underline-offset-2": {},
 				},
 				".title": {
-					"@apply text-2xl font-semibold text-accent-2": {},
+					"@apply text-2xl font-semibold font-custom-styled text-accent-2": {},
 				},
 			});
 		}),
