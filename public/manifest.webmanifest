@@ -1,0 +1,21 @@
+{
+	"name": "Andie Yam personal site",
+	"short_name": "Andie_Yam",
+	"description": "Andie Yam's portfolio and personal site",
+	"icons": [
+		{
+			"src": "/192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#1d1f21",
+	"theme_color": "#4B58CF",
+	"display": "standalone"
+}

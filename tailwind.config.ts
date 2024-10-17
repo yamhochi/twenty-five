@@ -32,7 +32,7 @@ export default {
 					"@apply underline underline-offset-2": {},
 				},
 				".title": {
-					"@apply text-2xl font-semibold text-accent-2": {},
+					"@apply text-2xl font-semibold font-custom-styled text-accent-2": {},
 				},
 			});
 		}),
@@ -51,6 +51,7 @@ export default {
 				// Add any custom fonts here
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
+				"custom-styled": ['"Space Grotesk"', 'sans-serif'],
 			},
 			transitionProperty: {
 				height: "height",
@@ -62,7 +63,7 @@ export default {
 				DEFAULT: {
 					css: {
 						a: {
-							"@apply cactus-link": "",
+							"@apply cactus-link" : "" , 					
 						},
 						blockquote: {
 							borderLeftWidth: "0",
