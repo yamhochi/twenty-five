@@ -63,7 +63,7 @@ export default {
 				DEFAULT: {
 					css: {
 						a: {
-							"@apply cactus-link": "",
+							"@apply cactus-link" : "" , 					
 						},
 						blockquote: {
 							borderLeftWidth: "0",
