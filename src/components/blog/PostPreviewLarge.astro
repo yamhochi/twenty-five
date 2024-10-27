@@ -11,31 +11,32 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 
 const { post, as: Tag = "div", withDesc = false } = Astro.props;
 const postDate = post.data.updatedDate ?? post.data.publishDate;
-
 ---
-<div class= "flex flex-row gap-x-4 items-center">
-{
 
-post.data.coverImage &&(
-	<Image
-		src={post.data.coverImage.src}
-		alt={post.data.coverImage.alt}
-		class="object-cover w-[112px] h-[125px] overflow-hidden"
-		loading="eager"
-		fetchpriority="high"
-		width={post.data.coverImage.width}
-		height={post.data.coverImage.height}
-	/>)
-	
-}
-<div class="space-y-1">
-<FormattedDate date={postDate} class="min-w-[120px] text-gray-500" />
-<Tag>
-	<a href={`/posts/${post.slug}/`} class="cactus-link" rel="prefetch">
-		{post.data.title}
-
-	</a>
-</Tag>
-{withDesc && <q class="line-clamp-3 block italic">{post.data.description}</q>}
-</div>
+<div class="flex flex-row items-center gap-x-4">
+	{
+		post.data.coverImage && (
+			<Image
+				src={post.data.coverImage.src}
+				alt={post.data.coverImage.alt}
+				class="h-[125px] w-[112px] overflow-hidden object-cover"
+				loading="eager"
+				fetchpriority="high"
+				width={post.data.coverImage.width}
+				height={post.data.coverImage.height}
+			/>
+		)
+	}
+	<div class="space-y-1 text-gray-600 dark:text-gray-400">
+		<FormattedDate
+			date={postDate}
+			class="min-w-[120px] font-custom-styled text-sm text-gray-600 dark:text-gray-400"
+		/>
+		<Tag>
+			<a href={`/posts/${post.slug}/`} class="cactus-link font-medium" rel="prefetch">
+				{post.data.title}
+			</a>
+		</Tag>
+		{withDesc && <q class="line-clamp-3 block italic">{post.data.description}</q>}
+	</div>
 </div>

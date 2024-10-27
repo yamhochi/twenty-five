@@ -13,70 +13,79 @@ const meta = {
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
 
-		<div class="flex sm:flex-row gap-x-12 gap-y-12 flex-col">
-			
-			<div class="space-y-6 order-last sm:order-first">
+		<div
+			class="flex flex-col gap-x-12 gap-y-12 leading-7 text-gray-600 dark:text-gray-400 sm:flex-row"
+		>
+			<div class="order-last space-y-6 sm:order-first">
 				<p class="leading-relaxed">
 					Hi there 👋 I’m Andie (she/her), this is a place where I document my journey working in
 					software & design since 2014.
 				</p>
 				<p class="leading-relaxed">
 					In my previous life, I was an excel whiz & map wrangler helping economists and town
-					planners make better policy decisions with data. As digital transformations took hold in that field, I found myself drawn to software development, sparking my interest in code, product creation, and design.
+					planners make better policy decisions with data. As digital transformations took hold in
+					that field, I found myself drawn to software development, sparking my interest in code,
+					product creation, and design.
 				</p>
 				<p class="leading-relaxed">
-					I'm passionate about improving digital inclusiveness through innovative technology. I am aware that design choices can profoundly impact how people experience technology, especially those who are encountering it for the first time. This fuels my ongoing passion for creating meaningful change through innovation.
+					I'm passionate about improving digital inclusiveness through innovative technology. I am
+					aware that design choices can profoundly impact how people experience technology,
+					especially those who are encountering it for the first time. This fuels my ongoing passion
+					for creating meaningful change through innovation.
 				</p>
 				<h2 class="title text-lg">Currently tinkering</h2>
-				<ul class="list-inside space-y-1 list-disc">
+				<ul class="list-inside list-disc space-y-1">
 					<li>
 						FinTech: Foundations, Payments, and Regulations
 						<a
-							class="text-xs cactus-link"
-							target="_blank" text-xs
+							class="cactus-link text-xs"
+							target="_blank"
+							text-xs
 							rel="noopener noreferrer"
 							href="https://www.coursera.org/account/accomplishments/records/NP269SDH24CP"
-							aria-label="external link">Wharton Online ↗︎</a>
+							aria-label="external link">Wharton Online ↗︎</a
+						>
 					</li>
 					<li>
 						Attendance and payment tracking solution <a
-							class="text-xs cactus-link inline-block"
+							class="cactus-link inline-block text-xs"
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://github.com/yamhochi/keystone-learning"
-							aria-label="external link">github repo ↗︎</a>
+							aria-label="external link">github repo ↗︎</a
+						>
 					</li>
 					<li>
 						Perceptually uniform colours <a
-							class="text-xs cactus-link inline-block"
+							class="cactus-link inline-block text-xs"
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://github.com/yamhochi/theme-project"
-							aria-label="external link">github repo ↗︎</a>
+							aria-label="external link">github repo ↗︎</a
+						>
 					</li>
 					<li>
 						Building things with
 						<a
-							class="text-xs cactus-link inline-block"
+							class="cactus-link inline-block text-xs"
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://github.com/yamhochi/twenty-four"
 							aria-label="external link">Astro.js ↗︎</a
-						> 
+						>
 					</li>
 				</ul>
 			</div>
 
-				<Image
-					src="https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/asset-headshot"
-					alt="andie yam headshot"
-					loading="eager"
-					fetchpriority="high"
-					class="object-cover w-[120px] min-w-[120px] h-[96px] max-h-[96px] overflow-hidden"
-					height="1200"
-					width="1800"
-				/>
-
+			<Image
+				src="https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/asset-headshot"
+				alt="andie yam headshot"
+				loading="eager"
+				fetchpriority="high"
+				class="h-[96px] max-h-[96px] w-[120px] min-w-[120px] overflow-hidden object-cover"
+				height="1200"
+				width="1800"
+			/>
 		</div>
 		<SocialList />
 	</div>

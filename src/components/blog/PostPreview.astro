@@ -13,11 +13,15 @@ const { as: Tag = "div", post, withDesc = false } = Astro.props;
 const postDate = getPostSortDate(post);
 ---
 
-<FormattedDate class="min-w-[120px] text-gray-600 dark:text-gray-400" date={postDate} />
-<Tag>
-	{post.data.draft && <span class="text-red-500">(Draft) </span>}
-	<a class="cactus-link" data-astro-prefetch href={`/posts/${post.slug}/`}>
-		{post.data.title}
-	</a>
-</Tag>
-{withDesc && <q class="line-clamp-3 italic">{post.data.description}</q>}
+<li class="flex flex-row items-center gap-x-2 text-gray-600 dark:text-gray-400">
+	<FormattedDate class="min-w-[120px] align-middle font-custom-styled text-sm" date={postDate} />
+	<Tag>
+		{post.data.draft && <span class="text-red-500">(Draft) </span>}
+		<a class="cactus-link font-medium" data-astro-prefetch href={`/posts/${post.slug}/`}>
+			{post.data.title}
+		</a>
+	</Tag>
+	{withDesc && <q class="line-clamp-3 italic">{post.data.description}</q>}
+</li>
+
+<!-- //TODO - fix post preview css to be consistent with Post preview L -->

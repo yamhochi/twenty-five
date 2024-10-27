@@ -27,9 +27,9 @@ export default {
 			addComponents({
 				".cactus-link": {
 					"&:hover": {
-						"@apply decoration-link decoration-2": {},
+						"@apply decoration-2 text-accent": {},
 					},
-					"@apply underline underline-offset-2": {},
+					"@apply underline underline-offset-2 decoration-[0.5px] font-custom-styled": {},
 				},
 				".title": {
 					"@apply text-2xl font-semibold font-custom-styled text-accent-2": {},
@@ -200,3 +200,5 @@ export default {
 		},
 	},
 } satisfies Config;
+
+// TODO: set reading font colour to gray 600 dark 400 (see post preview)
