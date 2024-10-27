@@ -29,9 +29,9 @@ const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("mus
 	<!-- Showcase -->
 	<section aria-label="Showcase list" class="mt-[120px]">
 		<h2 class="title mb-8 font-custom-styled text-2xl">Showcase</h2>
-		<p class="mb-8 text-base">
-			Vocal and Homtrust are products of long term research, design, and leadership over the past 2
-			years at Thinkmill, summarised into key points.
+		<p class="mb-12 text-lg leading-7 text-gray-600 dark:text-gray-400">
+			<!-- Vocal and Homtrust are products of long term research, design, and leadership over the past 2
+			years at Thinkmill, summarised into key points. -->
 			<ul class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
 				{
 					showcasePosts.map((p) => (
@@ -48,13 +48,7 @@ const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("mus
 	<section aria-label="Musing list" class="mt-16">
 		<h2 class="title mb-8 font-custom-styled text-2xl">Archived Projects</h2>
 		<ul class="space-y-4 sm:space-y-2">
-			{
-				archivePosts.map((p) => (
-					<li class="flex flex-row gap-x-2">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
+			{archivePosts.map((p) => <PostPreview post={p} />)}
 		</ul>
 	</section>
 
@@ -62,13 +56,7 @@ const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("mus
 	<section aria-label="Archive list" class="mt-16">
 		<h2 class="title mb-8 font-custom-styled text-2xl">Product & Tech Musings</h2>
 		<ul class="space-y-4 sm:space-y-2">
-			{
-				musingPosts.map((p) => (
-					<li class="flex flex-row gap-x-2">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
+			{musingPosts.map((p) => <PostPreview post={p} />)}
 		</ul>
 	</section>
 </PageLayout>

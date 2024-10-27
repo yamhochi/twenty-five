@@ -13,38 +13,38 @@ const url = new URL(Astro.request.url);
 			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
 			href="/"
 		>
-		<svg
-		class="me-3 h-10 w-6 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-20 sm:w-12"
-		aria-hidden="true"
-		focusable="false"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 330 480"
-	>
-		<title>Logo</title>
-		<path
-			fill="#4B58CF"
-			fill-rule="evenodd"
-			d="m176.488 169.195 17.007 52.794h.294c12.851 39.777 25.432 78.715 25.502 78.902 7.147 19.024-11.859 30.989-16.066 30.989 0 .326-15.962 1.63-15.962 1.63v34.862h28.823c14.203 0 25.116-3.074 32.74-9.223 7.623-6.149 13.524-15.69 17.701-28.623l63.286-192.73h-46.256l-32.133 114.167-36.471-114.167h-.272L170.536 0h-58.9L39.5781 221.989h48.2475l15.6644-52.794h72.998ZM139.97 42.8709h-1.471l-22.646 79.1181h47.057l-22.94-79.1181ZM318.655 435.349H73.0734V480H318.655v-44.651Z"
-			clip-rule="evenodd"></path>
-		<path
-			fill="#C8D0FF"
-			fill-rule="evenodd"
-			d="m136.91 169.195 17.007 52.794h.294c12.85 39.777 25.432 78.715 25.502 78.902 7.147 19.024-11.859 30.989-16.066 30.989 0 .326-15.962 1.63-15.962 1.63v34.862h28.823c14.203 0 25.116-3.074 32.74-9.223 7.623-6.149 13.524-15.69 17.701-28.623l63.286-192.73h-46.256l-32.133 114.167-36.471-114.167h-.272L130.958 0h-58.9L0 221.989h48.2475l15.6648-52.794H136.91ZM100.391 42.8709h-1.4701L76.2745 121.989h47.0575l-22.941-79.1181ZM279.077 435.349H33.4953V480H279.077v-44.651Z"
-			clip-rule="evenodd"></path>
-	</svg>
+			<svg
+				class="me-3 h-12 w-6 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-16 sm:w-12"
+				aria-hidden="true"
+				focusable="false"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 330 480"
+			>
+				<title>Logo</title>
+				<path
+					fill="#4B58CF"
+					fill-rule="evenodd"
+					d="m176.488 169.195 17.007 52.794h.294c12.851 39.777 25.432 78.715 25.502 78.902 7.147 19.024-11.859 30.989-16.066 30.989 0 .326-15.962 1.63-15.962 1.63v34.862h28.823c14.203 0 25.116-3.074 32.74-9.223 7.623-6.149 13.524-15.69 17.701-28.623l63.286-192.73h-46.256l-32.133 114.167-36.471-114.167h-.272L170.536 0h-58.9L39.5781 221.989h48.2475l15.6644-52.794h72.998ZM139.97 42.8709h-1.471l-22.646 79.1181h47.057l-22.94-79.1181ZM318.655 435.349H73.0734V480H318.655v-44.651Z"
+					clip-rule="evenodd"></path>
+				<path
+					fill="#C8D0FF"
+					fill-rule="evenodd"
+					d="m136.91 169.195 17.007 52.794h.294c12.85 39.777 25.432 78.715 25.502 78.902 7.147 19.024-11.859 30.989-16.066 30.989 0 .326-15.962 1.63-15.962 1.63v34.862h28.823c14.203 0 25.116-3.074 32.74-9.223 7.623-6.149 13.524-15.69 17.701-28.623l63.286-192.73h-46.256l-32.133 114.167-36.471-114.167h-.272L130.958 0h-58.9L0 221.989h48.2475l15.6648-52.794H136.91ZM100.391 42.8709h-1.4701L76.2745 121.989h47.0575l-22.941-79.1181ZM279.077 435.349H33.4953V480H279.077v-44.651Z"
+					clip-rule="evenodd"></path>
+			</svg>
 			<span class="text-xl font-bold sm:text-2xl">Andie Yam</span>
 		</a>
 		<nav
 			aria-label="Main menu"
-			class="absolute -inset-x-4 top-14 hidden flex-col items-end gap-y-4 rounded-md bg-bgColor/[.85] py-4 text-accent shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:-ms-4 sm:mt-1 sm:flex sm:flex-row sm:items-center sm:divide-x sm:divide-dashed sm:divide-accent sm:rounded-none sm:bg-transparent sm:py-0 sm:shadow-none sm:backdrop-blur-none"
+			class="absolute -inset-x-4 top-14 hidden flex-col items-end gap-y-4 rounded-md bg-bgColor/[.85] py-4 text-accent shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:-ms-4 sm:mt-[8px] sm:flex sm:flex-row sm:items-center sm:divide-x sm:divide-accent sm:rounded-none sm:bg-transparent sm:py-0 sm:shadow-none sm:backdrop-blur-none"
 			id="navigation-menu"
 		>
 			{
 				menuLinks.map((link) => (
 					<a
 						aria-current={url.pathname === link.path ? "page" : false}
-						class="px-4 py-4 underline-offset-2 sm:py-0 sm:hover:underline"
+						class="px-4 py-4 font-custom-styled font-medium leading-[0.8] underline-offset-2 sm:py-0 sm:hover:underline"
 						data-astro-prefetch
 						href={link.path}
 					>

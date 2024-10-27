@@ -12,9 +12,9 @@ const { headings } = Astro.props;
 const toc = generateToc(headings);
 ---
 
-<aside class="sticky top-20 order-2 -me-32 hidden basis-64 lg:block">
+<aside class="basis48 sticky top-20 order-2 -me-64 hidden lg:block">
 	<h2 class="font-semibold text-accent-2">Table of Contents</h2>
-	<ul class="mt-4 text-xs">
+	<ul class="mt-4 text-xs font-medium">
 		{toc.map((heading) => <TOCHeading heading={heading} />)}
 	</ul>
 </aside>
