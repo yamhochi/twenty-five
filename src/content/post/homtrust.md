@@ -66,4 +66,4 @@ The outcome of our collective efforts was the empowerment of customers to carry 
 
 ## Summary
 
-In summary, the development of Homtrust in 2023 represented a significant turning point for HOMstar. It addressed pressing challenges, restored customer confidence, and facilitated the seamless integration of a specialized accounting platform within the HOMstar ecosystem. The design-led, domain-driven approach, combined with a focus on simplicity and completeness, not only improved customer experiences but also positioned the business for sustained growth and success.
+In summary, the development of Homtrust in 2023 represented a significant turning point for Homstar. It addressed pressing challenges, restored customer confidence, and facilitated the seamless integration of a specialized accounting platform within the Homstar ecosystem. The design-led, domain-driven approach, combined with a focus on simplicity and completeness, not only improved customer experiences but also positioned the business for sustained growth and success.
