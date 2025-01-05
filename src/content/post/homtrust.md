@@ -56,7 +56,8 @@ Intelligent invoice allocation systems to ensure creditors are paid accurately a
 As Design Lead, I managed the dual challenge of balancing two distinct streams of work: tackling the complex UX needs of trust accounting and crafting a modern, cohesive UI. This required close collaboration with cross-functional teams to deliver a solution that was both highly functional and visually engaging.
 
 **UX Stream: Simplifying Complexity and Redesigning Workflows**
-The UX stream focused on understanding user pain points and redesigning complex accounting flows to be intuitive and error-resistant. Rapid prototyping and iterative validation ensured the workflows aligned with user needs and business objectives.
+The UX stream focused on understanding user pain points and Conducting as-is and to-be process mapping to identify gaps and recommend improvements. Rapid prototyping and iterative validation ensured the workflows aligned with user needs and business objectives.
+
 
 **UI Stream: Establishing Standards and Enhancing Visual Experience**
 The UI stream created a consistent design system to unify the platform’s look and feel. Close collaboration with front-end developers ensured seamless implementation, enhancing usability while delivering a polished and professional interface.
