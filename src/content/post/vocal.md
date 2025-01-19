@@ -62,7 +62,7 @@ My approach led to increased confidence in investing in features such as comment
 
 ## Elevating craft across web & iOS
 
-![two screens of a yellow flower with a bee on top of it and a purple background with a yellow border](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/nuy8p6rivcfwg3xk5vkt)
+![two screens of a yellow flower with a bee on top of it and a purple background with a yellow border](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/dosuyisaigzswmbonrr0)
 
 The success of the Vocal Reader App indicated that the investments made in product design and strategy were delivering significant value.
 
@@ -72,7 +72,7 @@ The seamless and relevant user experience across different platforms was particu
 
 ## Measuring success
 
-![two screens of a yellow flower with a bee on top of it and a purple background with a yellow border](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/tfqzucdegvitjzg1x9ha)
+![a screen showing analytics](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/tb9y6rwcsdqgswuzkfg1)
 
 As Vocal's long-term and short-term roadmap continued to unfold, I took an active role in delving into custom reports to gauge usage and adoption with real data.
 

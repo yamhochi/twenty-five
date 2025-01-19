@@ -32,7 +32,11 @@ The current solution is a white-labeled third-party service that has been custom
 
 ## Rebuilding from 0 to 1
 
-![a screenshot of a screen shot of a payment form with a credit card in the center of the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/xavnmymlje3stybpybxq)
+<video autoplay="" class="w-full h-full m-0 object-contain" loop="" muted="" playsinline="">
+      <source type="video/mp4" src="https://res.cloudinary.com/ddgt1wiwm/video/upload/f_auto:video,q_auto/v1/twenty-four-assets/xuf5f2ziyjsgwbohned5">
+</video>
+
+![a screenshot of a screen shot of a payment form with a credit card in the center of the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/fzrbjxh8yckqrrxahnbt)
 
 Given the current limitations of the white-labeled third-party service, Thinkmill is focused on developing a bespoke, in-house accounting solution that is fully tailored to the specific needs of the Short-Term Rental (STR) industry. This solution will ensure:
 
@@ -64,11 +68,9 @@ The UI stream created a consistent design system to unify the platform’s look 
 
 ---
 
-## UX and business complexity 
+## Addressing UX challanges 
 
-<video autoplay="" class="w-full h-full m-0 object-contain" loop="" muted="" playsinline="">
-      <source type="video/mp4" src="https://res.cloudinary.com/ddgt1wiwm/video/upload/f_auto:video,q_auto/v1/twenty-four-assets/xuf5f2ziyjsgwbohned5">
-</video>
+![a screenshot of a screen shot of a payment form with a credit card in the center of the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/xavnmymlje3stybpybxq)
 
 
 My role was to facilitate and workshop the "as-is" state, deeply understanding accounting requirements, technological limitations, legal compliance, and business processes necessary to perform an end-to-end trust accounting task. From there, I translated these complexities into simpler and more logical workflows to ensure both usability and efficiency.
