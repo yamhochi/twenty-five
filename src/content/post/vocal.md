@@ -62,7 +62,7 @@ My approach led to increased confidence in investing in features such as comment
 
 ## Elevating craft across web & iOS
 
-![two screens of a yellow flower with a bee on top of it and a purple background with a yellow border](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/dosuyisaigzswmbonrr0)
+![two screens of a yellow flower with a bee on top of it and a purple background with a yellow border](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/nuy8p6rivcfwg3xk5vkt)
 
 The success of the Vocal Reader App indicated that the investments made in product design and strategy were delivering significant value.
 
