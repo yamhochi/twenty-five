@@ -20,7 +20,7 @@
 		"@astrojs/sitemap": "3.2.1",
 		"@astrojs/tailwind": "5.1.4",
 		"@vercel/analytics": "^1.4.1",
-		"astro": "5.1.1",
+		"astro": "5.5.6",
 		"astro-expressive-code": "^0.37.0",
 		"astro-icon": "^1.1.5",
 		"astro-robots-txt": "^1.0.0",
