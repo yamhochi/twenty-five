@@ -16,7 +16,7 @@ draft: false
 
 <!-- ![a screenshot of a phone with a number of items on the screen and a number of other items on the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/ov6mvtejyaarbux7ha13) -->
 
-![a screenshot of homtrust hero image](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-hero_m6s3pb)
+![a screenshot of homtrust hero image](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-hero_kummo5)
 
 Homhero is the leading B2B software provider to the Australian holiday rental industry
 
