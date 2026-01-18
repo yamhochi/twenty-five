@@ -16,7 +16,7 @@ draft: false
 
 <!-- ![a screenshot of a phone with a number of items on the screen and a number of other items on the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/ov6mvtejyaarbux7ha13) -->
 
-![a screenshot of homtrust hero image](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-hero_jfvkga)
+![a screenshot of homtrust hero image](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-hero_m6s3pb)
 
 Homhero is the leading B2B software provider to the Australian holiday rental industry
 
@@ -112,7 +112,7 @@ Adopting a schema-led design approach to prioritize and present information grad
 
 <!-- ![screenshots of Receipting and interviews](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/shihuh7sqtrebm7rpqox) -->
 
-![screenshots of dashboard](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-dashboard_v453uf)
+![screenshots of dashboard](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-dashboard_uahly9)
 
 The outcome of our collective efforts was the empowerment of customers to carry out end-to-end accounting functions more effectively than before. This achievement not only rekindled trust among existing clients but also allowed the business to refocus on its growth and business goals.
 
