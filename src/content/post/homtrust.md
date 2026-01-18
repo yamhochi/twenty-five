@@ -85,7 +85,7 @@ The UI stream created a consistent design system to unify the platform’s look 
 
 <!-- ![a screenshot of a screen shot of a payment form with a credit card in the center of the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/xavnmymlje3stybpybxq) -->
 
-![a screenshot of a screen shot of a payment form with a credit card in the center of the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-uxchallenges_gfz9vc)
+![a screenshot of a screen shot of a payment form with a credit card in the center of the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-uxchallenges1_cxbt3n)
 
 One of the key challenges in the current system was the lack of visibility into transaction states. Users couldn't easily tell where money was in the process, which delayed downstream activities like payments, reconciliation, and reporting. This bottleneck forced teams into constant back-and-forth to track progress, often requiring calls to the HomStar support team just to resolve basic tasks.
 
@@ -94,7 +94,7 @@ My role was to facilitate and workshop the "as-is" state, deeply understanding a
 ---
 ## UI Considerations
 
-![screenshots of UI components](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-UIconsiderations_lcbzof)
+![screenshots of UI components](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-UIconsiderations_brkfs7)
 
 When it came to the interface elements, these were some of the key UI considerations in crafting the Homtrust interface:
 
