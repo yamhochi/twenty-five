@@ -15,12 +15,12 @@
 		"check": "astro check"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "4.3.12",
-		"@astrojs/rss": "4.0.14",
-		"@astrojs/sitemap": "3.6.0",
+		"@astrojs/mdx": "4.3.13",
+		"@astrojs/rss": "4.0.15",
+		"@astrojs/sitemap": "3.7.0",
 		"@astrojs/tailwind": "6.0.2",
 		"@vercel/analytics": "^1.4.1",
-		"astro": "5.16.4",
+		"astro": "5.16.11",
 		"astro-expressive-code": "^0.37.0",
 		"astro-icon": "^1.1.5",
 		"astro-robots-txt": "^1.0.0",

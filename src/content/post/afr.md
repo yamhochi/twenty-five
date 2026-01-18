@@ -1,5 +1,5 @@
 ---
-title: "Australian Financial Review B2B2C Platform"
+title: "Australian Financial Review corporate subscriptions"
 description: "A B2B Scale up opportunity for Corporate Subscriptions"
 publishDate: "15 October 2020"
 tags: ["archive"]
