@@ -87,6 +87,7 @@ The UI stream created a consistent design system to unify the platform’s look 
 
 ![a screenshot of a screen shot of a payment form with a credit card in the center of the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-uxchallenges_gfz9vc)
 
+One of the key challenges in the current system was the lack of visibility into transaction states. Users couldn't easily tell where money was in the process, which delayed downstream activities like payments, reconciliation, and reporting. This bottleneck forced teams into constant back-and-forth to track progress, often requiring calls to the HomStar support team just to resolve basic tasks.
 
 My role was to facilitate and workshop the "as-is" state, deeply understanding accounting requirements, technological limitations, legal compliance, and business processes necessary to perform an end-to-end trust accounting task. From there, I translated these complexities into simpler and more logical workflows to ensure both usability and efficiency.
 
