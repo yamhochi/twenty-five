@@ -10,6 +10,7 @@ overrides:
   form-data: 4.0.4
   glob: '>=10.5.0'
   h3: '>=1.15.5'
+  lodash: '>=4.17.23'
   sharp: '>=0.33.5'
   tar: '>=7.5.7'
   tar-fs: '>=3.1.1'
@@ -5345,8 +5346,8 @@ packages:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
     dev: false
 
-  /lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  /lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
     dev: true
 
   /longest-streak@3.1.0:
@@ -8835,7 +8836,7 @@ packages:
       '@vscode/l10n': 0.0.18
       ajv: 8.17.1
       ajv-draft-04: 1.0.0(ajv@8.17.1)
-      lodash: 4.17.21
+      lodash: 4.17.23
       prettier: 3.7.4
       request-light: 0.5.8
       vscode-json-languageservice: 4.1.8
