@@ -72,7 +72,8 @@
 			"lodash": ">=4.17.23",
 			"sharp": ">=0.33.5",
 			"tar": ">=7.5.7",
-			"tar-fs": ">=3.1.1"
+			"tar-fs": ">=3.1.1",
+			"undici": ">=6.23.0"
 		},
 		"peerDependencyRules": {
 			"ignoreMissing": [
