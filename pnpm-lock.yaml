@@ -14,6 +14,7 @@ overrides:
   sharp: '>=0.33.5'
   tar: '>=7.5.7'
   tar-fs: '>=3.1.1'
+  undici: '>=6.23.0'
 
 dependencies:
   '@astrojs/mdx':
@@ -3148,7 +3149,7 @@ packages:
       parse5: 7.2.1
       parse5-htmlparser2-tree-adapter: 7.1.0
       parse5-parser-stream: 7.1.2
-      undici: 6.20.1
+      undici: 7.22.0
       whatwg-mimetype: 4.0.0
     dev: false
 
@@ -8206,9 +8207,9 @@ packages:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
     dev: false
 
-  /undici@6.20.1:
-    resolution: {integrity: sha512-AjQF1QsmqfJys+LXfGTNum+qw4S88CojRInG/6t31W/1fk6G59s92bnAvGz5Cmur+kQv2SURXEvvudLmbrE8QA==}
-    engines: {node: '>=18.17'}
+  /undici@7.22.0:
+    resolution: {integrity: sha512-RqslV2Us5BrllB+JeiZnK4peryVTndy9Dnqq62S3yYRRTj0tFQCwEniUy2167skdGOy3vqRzEvl1Dm4sV2ReDg==}
+    engines: {node: '>=20.18.1'}
     dev: false
 
   /unicode-trie@2.0.0:
