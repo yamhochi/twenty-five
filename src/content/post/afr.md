@@ -1,6 +1,6 @@
 ---
 title: "Australian Financial Review corporate subscriptions"
-description: "A B2B Scale up opportunity for Corporate Subscriptions"
+description: "A bespoke opportunity for Corporate Subscriptions"
 publishDate: "15 October 2020"
 tags: ["archive"]
 # coverImage:
@@ -11,7 +11,7 @@ draft: false
 
 ![three screens of a website with a blue background showing all subscribers table, a welcome email and the homepage of the Australian Financial Review](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/afr-landing.png)
 
-I had the opportunity recently to work with the Financial Review's B2B team to refresh and modernise current workflows to scale up the business
+I had the opportunity recently to work with the Financial Review's corporate team to refresh and modernise current workflows to scale up the business
 
 ---
 
