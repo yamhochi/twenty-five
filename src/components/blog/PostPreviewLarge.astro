@@ -9,34 +9,41 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 	withDesc?: boolean;
 };
 
-const { post, as: Tag = "div", withDesc = false } = Astro.props;
+const { post, as: Tag = "div", withDesc = true } = Astro.props;
 const postDate = post.data.updatedDate ?? post.data.publishDate;
 ---
 
-<div class="flex flex-row items-center gap-x-4">
-	{
-		post.data.coverImage && (
-			<Image
-				src={post.data.coverImage.src}
-				alt={post.data.coverImage.alt}
-				class="h-[125px] w-[112px] overflow-hidden object-cover"
-				loading="eager"
-				fetchpriority="high"
-				width={post.data.coverImage.width}
-				height={post.data.coverImage.height}
-			/>
-		)
-	}
-	<div class="space-y-1 text-gray-600 dark:text-gray-400">
+<div class="items-left flex flex-col gap-y-4 sm:flex-col">
+	<a
+		href={`/posts/${post.slug}/`}
+		class="group cactus-link flex flex-col gap-y-4 font-custom-styled"
+		rel="prefetch"
+	>
+		<Tag><h3 class="cactus-link title font-custom-styled text-xl group-hover:text-accent">{post.data.title}</h3></Tag>
+
+		{
+			post.data.coverImage && (
+				<div class="w-full overflow-hidden sm:h-[100%] sm:w-4/5">
+					<Image
+						src={post.data.coverImage.src}
+						alt={post.data.coverImage.alt}
+						class="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+						loading="eager"
+						fetchpriority="high"
+						width={post.data.coverImage.width}
+						height={post.data.coverImage.height}
+					/>
+				</div>
+			)
+		}
+	</a>
+	<div
+		class="items-left flex flex-col gap-x-2 text-gray-600 dark:text-gray-400 sm:flex-row sm:items-center"
+	>
 		<FormattedDate
 			date={postDate}
 			class="min-w-[120px] font-custom-styled text-sm text-gray-600 dark:text-gray-400"
 		/>
-		<Tag>
-			<a href={`/posts/${post.slug}/`} class="cactus-link font-medium" rel="prefetch">
-				{post.data.title}
-			</a>
-		</Tag>
-		{withDesc && <q class="line-clamp-3 block italic">{post.data.description}</q>}
+		{withDesc && <p class="line-clamp-3 block italic">{post.data.description}</p>}
 	</div>
 </div>

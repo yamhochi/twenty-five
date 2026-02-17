@@ -31,10 +31,10 @@ const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("mus
 		<p class="mb-12 text-lg leading-7 text-gray-600 dark:text-gray-400">
 			<!-- Vocal and Homtrust are products of long term research, design, and leadership over the past 2
 			years at Thinkmill, summarised into key points. -->
-			<ul class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+			<ul class="flex flex-col space-y-12 sm:space-y-12">
 				{
 					showcasePosts.map((p) => (
-						<li class="flex min-w-[320px] grow flex-row gap-x-4">
+						<li class="flex-1 grow flex-col gap-x-4 sm:flex-col">
 							<PostPreviewL post={p} />
 						</li>
 					))
