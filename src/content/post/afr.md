@@ -1,6 +1,6 @@
 ---
 title: "Australian Financial Review corporate subscriptions"
-description: "A bespoke opportunity for Corporate Subscriptions"
+description: "A bespoke opportunity for Australian Financial Review Corporate Subscriptions"
 publishDate: "15 October 2020"
 tags: ["archive"]
 # coverImage:
