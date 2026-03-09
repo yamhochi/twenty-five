@@ -19,7 +19,11 @@ const postDate = post.data.updatedDate ?? post.data.publishDate;
 		class="group cactus-link flex flex-col gap-y-4 font-custom-styled"
 		rel="prefetch"
 	>
-		<Tag><h3 class="cactus-link title font-custom-styled text-xl group-hover:text-accent">{post.data.title}</h3></Tag>
+		<Tag
+			><h3 class="cactus-link title font-custom-styled text-3xl group-hover:text-accent">
+				{post.data.title}
+			</h3></Tag
+		>
 
 		{
 			post.data.coverImage && (
