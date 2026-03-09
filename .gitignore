@@ -19,6 +19,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# local assets
+public/creditorwatch/
+
 # misc
 *.pem
 .cache

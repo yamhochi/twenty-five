@@ -5,7 +5,7 @@ publishDate: "11 Nov 2023"
 tags: ["showcase"]
 coverImage:
   # src: "./homtrust-greenfield.png"
-  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/homtrust-greenfield"
+  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/HT-index_bqudnm.png"
   alt: "a screenshot of a screen shot of a payment form with a credit card in the center of the screen"
   width: "1280"
   height: "1450"
