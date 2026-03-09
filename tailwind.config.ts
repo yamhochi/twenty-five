@@ -53,6 +53,9 @@ export default {
 				serif: [...fontFamily.serif],
 				"custom-styled": ['"Space Grotesk"', 'sans-serif'],
 			},
+			maxWidth: {
+				"3xl": "60rem",
+			},
 			transitionProperty: {
 				height: "height",
 			},
