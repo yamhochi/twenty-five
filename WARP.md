@@ -174,3 +174,4 @@ There is currently **no test script** defined in `package.json` and no test fram
 - **Tag routes**: Components link to `/tags/{tag}/`, but only `tags/index.astro` currently exists. If you implement per-tag listing pages, add routes under `src/pages/tags/` and ensure they reuse `getAllPosts()` and the tag helpers from `src/data/post.ts`.
 - **Theme integration with Expressive Code**: The code block theme is tied to the light/dark theme via `expressiveCodeOptions.themeCssSelector`. If you change theme names or add additional themes, update both the Expressive Code config and any CSS that depends on `data-theme`.
 - **Environment variables**: Features like Webmentions and the RSS feed rely on `import.meta.env.SITE` and optionally `import.meta.env.WEBMENTION_API_KEY`. When running locally without these set, Webmentions gracefully no-op but logging will warn you.
+#
