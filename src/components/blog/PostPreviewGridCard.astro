@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPostSortDate } from "@/data/post";
+
+type Props = {
+	post: CollectionEntry<"post">;
+};
+
+const { post } = Astro.props;
+const postDate = getPostSortDate(post);
+const year = postDate.getFullYear();
+const eyebrow = [post.data.company, year].filter(Boolean).join(" · ");
+---
+
+<article
+	class="group flex h-full flex-col rounded-lg border border-accent-2/10 p-5 transition-colors hover:border-accent-2/25"
+>
+	<a href={`/posts/${post.slug}/`} rel="prefetch" class="flex h-full flex-col">
+		<div class="mb-2 font-custom-styled text-xs font-semibold uppercase tracking-wide text-textColor/35">
+			{eyebrow}
+		</div>
+		<h4
+			class="mb-2 font-custom-styled text-sm font-semibold leading-snug text-accent-2 transition-colors group-hover:text-accent"
+		>
+			{post.data.title}
+		</h4>
+		<p class="mt-auto text-xs leading-relaxed text-textColor/60">{post.data.description}</p>
+	</a>
+</article>

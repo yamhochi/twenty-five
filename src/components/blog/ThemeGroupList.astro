@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPostSortDate } from "@/data/post";
+
+type Props = {
+	posts: CollectionEntry<"post">[];
+	description: string;
+};
+
+const { posts, description } = Astro.props;
+const [featured] = posts;
+---
+
+<div class="grid overflow-hidden rounded-lg border border-accent-2/10" style="grid-template-columns: 38% 1fr;">
+	<!-- Theme image — first post's cover image -->
+	{
+		featured?.data.coverImage && (
+			<div class="overflow-hidden border-r border-accent-2/10" style="min-height: 200px;">
+				<img
+					src={featured.data.coverImage.src}
+					alt={featured.data.coverImage.alt}
+					class="h-full w-full object-cover"
+					loading="lazy"
+					style="min-height: 200px;"
+				/>
+			</div>
+		)
+	}
+
+	<!-- Project list -->
+	<div class="bg-bgColor">
+		<!-- Theme description -->
+		<p
+			class="border-b border-accent-2/10 px-5 py-4 font-custom-styled text-xs leading-relaxed text-textColor/40"
+		>
+			{description}
+		</p>
+
+		<!-- Projects -->
+		{
+			posts.map((post) => {
+				const year = getPostSortDate(post).getFullYear();
+				return (
+					<a
+						href={`/posts/${post.slug}/`}
+						rel="prefetch"
+						class="group block border-b border-accent-2/10 px-5 py-4 last:border-b-0 transition-colors hover:bg-accent-2/[0.03]"
+					>
+						<div class="mb-1 font-custom-styled text-xs font-semibold uppercase tracking-widest text-textColor/35">
+							{post.data.company && `${post.data.company} · `}{year}
+						</div>
+						<h4 class="font-custom-styled text-sm font-semibold leading-snug text-accent-2 transition-colors group-hover:text-accent">
+							{post.data.title}
+						</h4>
+						<p class="mt-1 text-xs leading-relaxed text-textColor/50">{post.data.description}</p>
+					</a>
+				);
+			})
+		}
+	</div>
+</div>

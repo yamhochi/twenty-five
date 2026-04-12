@@ -3,6 +3,8 @@ title: "Australian Financial Review corporate subscriptions"
 description: "A bespoke opportunity for Australian Financial Review Corporate Subscriptions"
 publishDate: "15 October 2020"
 tags: ["archive"]
+theme: "consumer"
+company: "Australian Financial Review"
 # coverImage:
 #   src: "afr-cover.png"
 #   alt: ""

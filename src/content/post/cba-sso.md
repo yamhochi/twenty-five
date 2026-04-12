@@ -3,6 +3,7 @@ title: "Commonwealth Bank Australia Staff SSO"
 description: "A Single Sign On Solution for CBA employees working in branch"
 publishDate: "03 Jun 2018"
 tags: ["archive"]
+company: "Commonwealth Bank"
 # coverImage:
 #   src: ""
 #   alt: ""

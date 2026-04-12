@@ -1,0 +1,65 @@
+---
+import SocialList from "@/components/SocialList.astro";
+import PostPreviewCard from "@/components/blog/PostPreviewCard.astro";
+import PostPreviewGridCard from "@/components/blog/PostPreviewGridCard.astro";
+import { getAllPosts, sortMDByDate } from "@/data/post";
+import PageLayout from "@/layouts/Base.astro";
+
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts);
+
+const showcasePosts = allPostsByDate.filter((post) => post.data.tags.includes("showcase"));
+const archivePosts = allPostsByDate.filter((post) => post.data.tags.includes("archive"));
+---
+
+<PageLayout meta={{ title: "Home" }}>
+	<section>
+		<!-- Role pill -->
+		<span
+			class="mb-5 inline-block rounded-full border border-accent/20 bg-accent/5 px-3 py-1 font-custom-styled text-xs font-semibold uppercase tracking-widest text-accent"
+		>
+			Lead Product Designer · B2B · FinTech
+		</span>
+
+		<p class="mt-[24px] font-custom-styled text-xl font-medium leading-loose">
+			👋🏻 I'm Andie, I help software teams figure out where their customers struggle and where new
+			opportunities lie, transforming those gaps into solutions that feel simple, trusted, and worth
+			paying for.
+		</p>
+		<p class="mb-[80px] mt-[24px] font-custom-styled text-xl font-medium leading-loose">
+			Currently at CreditorWatch, I'm helping modernise an aging platform by uncovering pathways to
+			grow with an expanding audience, leveraging AI & emerging technology to rethink B2B frictions
+			and experiences.
+		</p>
+
+		<SocialList />
+	</section>
+
+	<!-- Featured Work -->
+	<section aria-label="Featured work" class="mt-[120px]">
+		<h2 class="title mb-8 font-custom-styled text-2xl">Featured Work</h2>
+		<ul class="flex flex-col space-y-6">
+			{
+				showcasePosts.map((p) => (
+					<li>
+						<PostPreviewCard post={p} />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+	<!-- Earlier Work -->
+	<section aria-label="Earlier work" class="mt-16">
+		<h2 class="title mb-8 font-custom-styled text-2xl">Earlier Work</h2>
+		<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+			{
+				archivePosts.map((p) => (
+					<li>
+						<PostPreviewGridCard post={p} />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</PageLayout>

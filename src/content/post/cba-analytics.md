@@ -3,9 +3,13 @@ title: "Commonwealth Bank Australia Analytics"
 description: " Designing tools to better understand, communicate and distribute data"
 publishDate: "11 Nov 2018"
 tags: ["archive"]
-# coverImage:
-#   src: "./homtrust-landing"
-#   alt: "Landing page of homtrust web and mobile view"
+theme: "analytics"
+company: "Commonwealth Bank"
+coverImage:
+  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/f_auto,q_auto/v1/twenty-four-assets/cbaAnalytics-landing"
+  alt: "Commonwealth Bank analytics dashboard"
+  width: "1600"
+  height: "900"
 draft: false
 ---
 

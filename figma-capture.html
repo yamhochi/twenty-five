@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andie Yam — Homepage v3 (Figma Capture)</title>
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Space Grotesk', system-ui, sans-serif; box-sizing: border-box; }
+
+    :root {
+      --bg:      hsl(210 6% 12%);
+      --surface: hsl(210 6% 15%);
+      --text:    hsl(220 3% 79%);
+      --muted:   hsl(220 3% 45%);
+      --bright:  hsl(0 0% 93%);
+      --accent:  hsl(159 64% 45%);
+      --border:  hsl(210 6% 22%);
+    }
+
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 40px 100px;
+    }
+
+    /* Nav */
+    nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 52px; }
+    .nav-logo { font-size: 13px; font-weight: 600; color: var(--bright); }
+    .nav-links { display: flex; gap: 20px; font-size: 12px; color: var(--muted); }
+
+    /* Bio */
+    .bio { margin-bottom: 80px; }
+    .role-pill {
+      display: inline-block; margin-bottom: 18px;
+      font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--accent); border: 1px solid hsla(159,64%,45%,.22);
+      background: hsla(159,64%,45%,.07); padding: 4px 12px; border-radius: 100px;
+    }
+    .bio-text { font-size: 17px; font-weight: 500; line-height: 1.75; color: var(--text); margin: 0 0 12px; }
+    .bio-sub  { font-size: 14px; line-height: 1.7; color: var(--muted); margin: 0 0 20px; }
+    .socials  { display: flex; gap: 16px; font-size: 12px; color: var(--muted); }
+
+    /* Section header */
+    .section-head {
+      display: flex; align-items: baseline; gap: 10px;
+      border-top: 1px solid var(--border); padding-top: 24px; margin-bottom: 24px;
+    }
+    .section-head h2 {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); margin: 0;
+    }
+    .section-head .count { font-size: 10px; color: hsla(220,3%,48%,.4); }
+
+    /* Alternating row — Fintech */
+    .alt-row {
+      display: grid; overflow: hidden;
+      border: 1px solid var(--border); border-radius: 10px; margin-bottom: 14px;
+    }
+    .alt-row.img-left  { grid-template-columns: 55% 45%; }
+    .alt-row.img-right { grid-template-columns: 45% 55%; }
+    .alt-row .img-cell { overflow: hidden; }
+    .alt-row.img-right .img-cell { order: 2; }
+    .alt-row.img-right .text-cell { order: 1; }
+    .alt-row img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .alt-row .text-cell {
+      display: flex; flex-direction: column; justify-content: center;
+      background: var(--surface); padding: 28px 28px;
+    }
+    .alt-row .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .alt-row h3 { font-size: 17px; font-weight: 600; color: var(--bright); line-height: 1.3; margin: 0 0 10px; }
+    .alt-row p  { font-size: 12px; color: var(--muted); line-height: 1.65; margin: 0 0 14px; }
+    .alt-row .outcome {
+      display: inline-flex; align-items: center; width: fit-content;
+      font-size: 11px; font-weight: 600; color: var(--accent);
+      background: hsla(159,64%,45%,.08); border: 1px solid hsla(159,64%,45%,.22);
+      padding: 3px 10px; border-radius: 100px;
+    }
+
+    /* Theme group — Analytics + Consumer */
+    .theme-group {
+      display: grid; grid-template-columns: 38% 1fr;
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    .theme-group .img-side { overflow: hidden; border-right: 1px solid var(--border); }
+    .theme-group .img-side img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .theme-group .list-side { background: var(--surface); }
+    .theme-desc {
+      font-size: 11px; color: var(--muted); line-height: 1.65;
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+    }
+    .proj-row {
+      padding: 14px 20px; border-bottom: 1px solid var(--border);
+      text-decoration: none; display: block;
+    }
+    .proj-row:last-child { border-bottom: none; }
+    .proj-row .co { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+    .proj-row h4 { font-size: 13px; font-weight: 600; color: var(--bright); margin: 0 0 3px; line-height: 1.35; }
+    .proj-row span { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    .mt-section { margin-top: 48px; }
+  </style>
+</head>
+<body>
+<div class="page" id="capture-root">
+
+  <!-- Nav -->
+  <nav>
+    <span class="nav-logo">Andie Yam</span>
+    <div class="nav-links"><span>Home</span><span>About</span></div>
+  </nav>
+
+  <!-- Bio -->
+  <section class="bio">
+    <div class="role-pill">Lead Product Designer · B2B · FinTech</div>
+    <p class="bio-text">👋🏻 I'm Andie, I help software teams figure out where their customers struggle and where new opportunities lie, transforming those gaps into solutions that feel simple, trusted, and worth paying for.</p>
+    <p class="bio-sub">Currently at CreditorWatch, modernising an aging B2B credit risk platform by uncovering pathways to grow with an expanding audience and rethinking workflows with AI.</p>
+    <div class="socials"><span>LinkedIn ↗</span><span>GitHub ↗</span><span>Email ↗</span></div>
+  </section>
+
+  <!-- Fintech & Regulatory -->
+  <section>
+    <div class="section-head">
+      <h2>Fintech &amp; Regulatory</h2>
+      <span class="count">2 projects</span>
+    </div>
+
+    <a class="alt-row img-left" href="#">
+      <div class="img-cell">
+        <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/CW-index_anmetp.png" alt="CreditorWatch" />
+      </div>
+      <div class="text-cell">
+        <div class="eyebrow">CreditorWatch · 2026</div>
+        <h3>From data dump to decisioning engine</h3>
+        <p>Strategic transformation of a fragmented credit risk platform into a cohesive B2B decisioning engine.</p>
+        <span class="outcome">↑ 30% YoY Growth</span>
+      </div>
+    </a>
+
+    <a class="alt-row img-right" href="#">
+      <div class="img-cell">
+        <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/HT-index_bqudnm.png" alt="Homstar" />
+      </div>
+      <div class="text-cell">
+        <div class="eyebrow">Homstar · 2023</div>
+        <h3>B2B Trust Accounting Platform</h3>
+        <p>0→1 financial platform for short-term accommodation and property managers, built in-house.</p>
+        <span class="outcome">0→1 Platform</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- Analytics & Intelligence -->
+  <section class="mt-section">
+    <div class="section-head">
+      <h2>Analytics &amp; Intelligence</h2>
+      <span class="count">3 projects</span>
+    </div>
+    <div class="theme-group">
+      <div class="img-side">
+        <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/f_auto,q_auto/v1/twenty-four-assets/cbaAnalytics-landing" alt="Analytics" />
+      </div>
+      <div class="list-side">
+        <p class="theme-desc">Data visualisation, spatial tools, and analytical intelligence across enterprise and government contexts.</p>
+        <a class="proj-row" href="#">
+          <div class="co">Commonwealth Bank · 2018</div>
+          <h4>Analytics Platform</h4>
+          <span>Designing tools to better understand, communicate and distribute data</span>
+        </a>
+        <a class="proj-row" href="#">
+          <div class="co">NSW Government · 2016</div>
+          <h4>Search &amp; Spatial Query</h4>
+          <span>Central resource for sharing and enabling environmental data in NSW</span>
+        </a>
+        <a class="proj-row" href="#">
+          <div class="co">Geonext Hackathon · 2015</div>
+          <h4>Visualising Melbourne's Bikeability</h4>
+          <span>Mapping and data visualisation for cycling infrastructure analysis</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consumer Apps -->
+  <section class="mt-section">
+    <div class="section-head">
+      <h2>Consumer Apps</h2>
+      <span class="count">3 projects</span>
+    </div>
+    <div class="theme-group">
+      <div class="img-side">
+        <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/f_auto,q_auto/v1/twenty-four-assets/vocal-landing" alt="Consumer" />
+      </div>
+      <div class="list-side">
+        <p class="theme-desc">Publishing platforms, media products, and subscription experiences designed for everyday audiences.</p>
+        <a class="proj-row" href="#">
+          <div class="co">Vocal · 2022</div>
+          <h4>Creator Publishing Tools</h4>
+          <span>Empowering creators with tools to grow their audience</span>
+        </a>
+        <a class="proj-row" href="#">
+          <div class="co">AFR · 2020</div>
+          <h4>Corporate Subscriptions</h4>
+          <span>A bespoke opportunity for Australian Financial Review Corporate Subscriptions</span>
+        </a>
+        <a class="proj-row" href="#">
+          <div class="co">Sydney Morning Herald · 2019</div>
+          <h4>Visual News Hackathon</h4>
+          <span>Proof of concept lowering barriers to visual journalism</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

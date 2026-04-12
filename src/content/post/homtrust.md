@@ -3,12 +3,15 @@ title: "Homstar B2B Trust accounting platform"
 description: "Financial platform for short term accommodation and property managers"
 publishDate: "11 Nov 2023"
 tags: ["showcase"]
+theme: "fintech"
+company: "Homstar"
+outcome: "0→1 Platform"
 coverImage:
   # src: "./homtrust-greenfield.png"
-  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/HT-index_bqudnm.png"
-  alt: "a screenshot of a screen shot of a payment form with a credit card in the center of the screen"
-  width: "1280"
-  height: "1450"
+  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/HT-index_bqudnm.png"
+  alt: "Homstar B2B trust accounting platform UI"
+  width: "1600"
+  height: "900"
 draft: false
 ---
 
