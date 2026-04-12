@@ -43,6 +43,5 @@
 		setTheme(e.detail.theme);
 	});
 
-	// listen for prefers-color-scheme change.
-	lightModePref.addEventListener("change", (e) => setTheme(e.matches ? "light" : "dark"));
+	// prefers-color-scheme listener disabled — dark mode is enforced
 </script>

@@ -13,8 +13,8 @@ const {
 <li class={`${depth > 2 ? "ms-2" : ""}`}>
 	<a
 		aria-label={`Scroll to section: ${text}`}
-		class={`block line-clamp-1 truncate font-custom-styled hover:text-accent ${depth <= 2 ? "mt-3" : "mt-2 text-[0.6875rem]"}`}
-		href={`#${slug}`}><span class="me-0.5 text-accent">#</span>{text}</a
+		class={`toc-link -mx-2 block line-clamp-1 truncate rounded px-2 py-2 font-custom-styled transition-colors hover:bg-[#292b2c] ${depth <= 2 ? "mt-0" : "mt-0 text-[0.6875rem]"}`}
+		href={`#${slug}`}>{text}</a
 	>
 	{
 		!!children.length && (

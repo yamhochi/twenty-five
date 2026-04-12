@@ -12,9 +12,50 @@ const { headings } = Astro.props;
 const toc = generateToc(headings);
 ---
 
-<aside class="basis48 sticky top-20 order-2 -me-64 hidden lg:block">
-	<h2 class="font-semibold text-accent-2">Table of Contents</h2>
+<aside id="toc-aside" class="basis48 sticky top-20 order-2 -me-64 hidden lg:block">
+	<h2 class="font-semibold text-accent-2">Contents</h2>
 	<ul class="mt-4 text-xs font-medium">
 		{toc.map((heading) => <TOCHeading heading={heading} />)}
 	</ul>
 </aside>
+
+<style>
+	:global(.toc-link[data-active="true"]) {
+		background-color: #292b2c;
+		color: hsl(var(--theme-accent));
+	}
+</style>
+
+<script>
+	const aside = document.getElementById("toc-aside");
+	if (aside) {
+		const links = aside.querySelectorAll<HTMLAnchorElement>("a.toc-link");
+		let activeId = "";
+
+		const setActive = (id: string) => {
+			if (id === activeId) return;
+			activeId = id;
+			links.forEach((link) => {
+				const matches = link.getAttribute("href") === `#${id}`;
+				link.dataset.active = matches ? "true" : "false";
+			});
+		};
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) setActive(entry.target.id);
+				});
+			},
+			{ rootMargin: "-10% 0px -85% 0px", threshold: 0 },
+		);
+
+		aside.querySelectorAll("a.toc-link").forEach((link) => {
+			const id = link.getAttribute("href")?.slice(1);
+			if (id) {
+				const heading = document.getElementById(id);
+				if (heading) observer.observe(heading);
+			}
+		});
+	}
+</script>

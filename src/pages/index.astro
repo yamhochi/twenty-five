@@ -80,9 +80,9 @@ const themes = [
 					</div>
 
 					{theme.type === "alternating" ? (
-						<ul class="flex flex-col divide-y divide-accent-2/10">
+						<ul class="flex flex-col divide-y divide-accent-2/10 gap-2">
 							{theme.posts.map((p) => (
-								<li class="py-4">
+								<li class="py-9">
 									<ProjectAlternatingRow post={p} index={0} noAlternate={true} />
 								</li>
 							))}
