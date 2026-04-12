@@ -76,7 +76,9 @@ export default {
 							borderRadius: "2px",
 						},
 						hr: {
-							borderTopStyle: "dashed",
+							borderTopStyle: "solid",
+							borderTopWidth: "1px",
+							borderTopColor: "rgba(237, 237, 237, 0.1)",
 						},
 						strong: {
 							fontWeight: "700",
@@ -180,12 +182,12 @@ export default {
 				},
 				cactus: {
 					css: {
-						"--tw-prose-body": theme("colors.textColor / 1"),
+						"--tw-prose-body": "#ededed",
 						"--tw-prose-bold": theme("colors.textColor / 1"),
 						"--tw-prose-bullets": theme("colors.textColor / 1"),
 						"--tw-prose-code": theme("colors.textColor / 1"),
 						"--tw-prose-headings": theme("colors.accent-2 / 1"),
-						"--tw-prose-hr": "0.5px dashed #666",
+						"--tw-prose-hr": "rgba(237, 237, 237, 0.1)",
 						"--tw-prose-links": theme("colors.textColor / 1"),
 						"--tw-prose-quotes": theme("colors.quote / 1"),
 						"--tw-prose-th-borders": "#666",

@@ -3,6 +3,8 @@ title: "Search & Spatial Query for NSW Government"
 description: "The Central Resource for Sharing and Enabling Environmental Data in NSW"
 publishDate: "30 Aug 2016"
 tags: ["musings"]
+theme: "analytics"
+company: "NSW Government"
 # coverImage:
 #   src: ""
 #   alt: ""

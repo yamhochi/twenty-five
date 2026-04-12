@@ -3,6 +3,7 @@ title: "Ansarada Mergers & Aquisitions Insights"
 description: "Evolving a startup's design capabilities for better experimentation and growth"
 publishDate: "14 Aug 2017"
 tags: ["archive"]
+company: "Ansarada"
 # coverImage:
 #   src: ""
 #   alt: ""

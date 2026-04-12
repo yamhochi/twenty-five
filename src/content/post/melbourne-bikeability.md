@@ -3,6 +3,8 @@ title: "Visualising Melbourne's bikeability @ Geonext Hackathon"
 description: "Geonext Hackathon's mapping melbourne bikeability data visualisation & analysis"
 publishDate: "02 December 2015"
 tags: ["musings"]
+theme: "analytics"
+company: "Geonext Hackathon"
 # coverImage:
 #   src: ""
 #   alt: ""

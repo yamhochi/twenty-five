@@ -3,6 +3,8 @@ title: "Visual News @ Sydney Morning Herald Hackathon"
 description: "A proof of concept to lowering barrier to visual journalism"
 publishDate: "11 Jun 2019"
 tags: ["musings"]
+theme: "consumer"
+company: "Sydney Morning Herald"
 # coverImage:
 #   src: "./homtrust-landing"
 #   alt: "Landing page of homtrust web and mobile view"

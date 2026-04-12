@@ -19,15 +19,18 @@ const post = defineCollection({
 					width: z.string(),
 				})
 				.optional(),
+			company: z.string().optional(),
 			description: z.string().min(50).max(160),
 			draft: z.boolean().default(false),
 			ogImage: z.string().optional(),
+			outcome: z.string().optional(),
 			publishDate: z
 				.string()
 				.or(z.date())
 				.transform((val) => new Date(val)),
 			tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
-			title: z.string().max(60),
+			theme: z.enum(["fintech", "analytics", "consumer"]).optional(),
+			title: z.string().max(80),
 			updatedDate: z
 				.string()
 				.optional()
