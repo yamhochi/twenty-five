@@ -1,66 +1,97 @@
 ---
 import SocialList from "@/components/SocialList.astro";
-import PostPreview from "@/components/blog/PostPreview.astro";
-import PostPreviewL from "@/components/blog/PostPreviewLarge.astro";
+import ProjectAlternatingRow from "@/components/blog/ProjectAlternatingRow.astro";
+import ThemeGroupList from "@/components/blog/ThemeGroupList.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 
-// const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts);
 
-const showcasePosts = allPostsByDate.filter((post) => post.data.tags.includes("showcase"));
-const archivePosts = allPostsByDate.filter((post) => post.data.tags.includes("archive"));
-const musingPosts = allPostsByDate.filter((post) => post.data.tags.includes("musings"));
+const fintechPosts  = allPostsByDate.filter((p) => p.data.theme === "fintech");
+const analyticsPosts = allPostsByDate.filter((p) => p.data.theme === "analytics");
+const consumerPosts  = allPostsByDate.filter((p) => p.data.theme === "consumer");
+
+const themes = [
+	{
+		id: "fintech",
+		label: "Fintech & Regulatory",
+		posts: fintechPosts,
+		type: "alternating" as const,
+	},
+	{
+		id: "analytics",
+		label: "Analytics & Intelligence",
+		posts: analyticsPosts,
+		type: "grouped" as const,
+		description:
+			"Data visualisation, spatial tools, and analytical intelligence across enterprise and government contexts.",
+	},
+	{
+		id: "consumer",
+		label: "Consumer Apps",
+		posts: consumerPosts,
+		type: "grouped" as const,
+		description:
+			"Publishing platforms, media products, and subscription experiences designed for everyday audiences.",
+	},
+];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
+	<!-- Bio -->
 	<section>
-		<p class="mt-[24px] font-custom-styled text-xl font-medium leading-loose">
+		<span
+			class="mb-5 inline-block rounded-full border border-accent/20 bg-accent/5 px-3 py-1 font-custom-styled text-xs font-bold uppercase tracking-[1.2px] text-accent"
+		>
+			Lead Product Designer · B2B · FinTech
+		</span>
+		<p class="mt-5 font-custom-styled text-[20px] font-medium leading-[2] text-textColor">
 			👋🏻 I'm Andie, I help software teams figure out where their customers struggle and where new
 			opportunities lie, transforming those gaps into solutions that feel simple, trusted, and worth
 			paying for.
 		</p>
-		<p class="mb-[80px] mt-[24px] font-custom-styled text-xl font-medium leading-loose">
+		<p class="mb-5 mt-3 font-custom-styled text-[20px] font-medium leading-[2] text-textColor">
 			Currently at CreditorWatch, I'm helping modernise an aging platform by uncovering pathways to
 			grow with an expanding audience, leveraging AI & emerging technology to rethink B2B frictions
 			and experiences.
 		</p>
-
 		<SocialList />
 	</section>
 
-	<!-- Showcase -->
-	<section aria-label="Showcase list" class="mt-[120px]">
-		<h2 class="title mb-8 font-custom-styled text-2xl">Recent work</h2>
-		<p class="mb-12 text-lg leading-7 text-gray-600 dark:text-gray-400">
-			<!-- Vocal and Homtrust are products of long term research, design, and leadership over the past 2
-			years at Thinkmill, summarised into key points. -->
-			<ul class="flex flex-col space-y-12 sm:space-y-12">
-				{
-					showcasePosts.map((p) => (
-						<li class="flex-1 grow flex-col gap-x-4 sm:flex-col">
-							<PostPreviewL post={p} />
-						</li>
-					))
-				}
-			</ul>
-		</p>
-	</section>
+	<!-- Theme sections -->
+	<div class="mt-12 flex flex-col gap-16">
+		{
+			themes.map((theme) => (
+				<section aria-label={theme.label}>
+					<!-- Section header -->
+					<div class="mb-12 flex flex-col gap-1 border-t border-accent-2/10 pt-12">
+						<div class="flex items-center gap-3">
+							<h2 class="font-custom-styled text-2xl font-bold uppercase tracking-[1.4px] text-textColor">
+								{theme.label}
+							</h2>
+							<span class="font-custom-styled text-xs text-textColor/40">
+								{theme.posts.length} {theme.posts.length === 1 ? "project" : "projects"}
+							</span>
+						</div>
+						{theme.description && (
+							<p class="font-custom-styled text-xs text-textColor/40">{theme.description}</p>
+						)}
+					</div>
 
-	<!-- Musing -->
-	<section aria-label="Musing list" class="mt-16">
-		<h2 class="title mb-8 font-custom-styled text-2xl">Archived Projects</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			{archivePosts.map((p) => <PostPreview post={p} />)}
-		</ul>
-	</section>
-
-	<!-- Archives -->
-	<section aria-label="Archive list" class="mt-16">
-		<h2 class="title mb-8 font-custom-styled text-2xl">Product & Tech Musings</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			{musingPosts.map((p) => <PostPreview post={p} />)}
-		</ul>
-	</section>
+					{theme.type === "alternating" ? (
+						<ul class="flex flex-col divide-y divide-accent-2/10">
+							{theme.posts.map((p) => (
+								<li class="py-4">
+									<ProjectAlternatingRow post={p} index={0} noAlternate={true} />
+								</li>
+							))}
+						</ul>
+					) : (
+						<ThemeGroupList posts={theme.posts} />
+					)}
+				</section>
+			))
+		}
+	</div>
 </PageLayout>

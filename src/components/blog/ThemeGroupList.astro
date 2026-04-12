@@ -4,24 +4,23 @@ import { getPostSortDate } from "@/data/post";
 
 type Props = {
 	posts: CollectionEntry<"post">[];
-	description: string;
+	description?: string;
 };
 
-const { posts, description } = Astro.props;
+const { posts } = Astro.props;
 const [featured] = posts;
 ---
 
-<div class="grid overflow-hidden rounded-lg border border-accent-2/10" style="grid-template-columns: 38% 1fr;">
+<div class="flex flex-col overflow-hidden sm:grid sm:gap-4" style="grid-template-columns: 38% 1fr;">
 	<!-- Theme image — first post's cover image -->
 	{
 		featured?.data.coverImage && (
-			<div class="overflow-hidden border-r border-accent-2/10" style="min-height: 200px;">
+			<div class="aspect-[33/29] sm:aspect-auto overflow-hidden">
 				<img
 					src={featured.data.coverImage.src}
 					alt={featured.data.coverImage.alt}
-					class="h-full w-full object-cover"
+					class="h-full w-full object-cover sm:h-[330px]"
 					loading="lazy"
-					style="min-height: 200px;"
 				/>
 			</div>
 		)
@@ -29,13 +28,6 @@ const [featured] = posts;
 
 	<!-- Project list -->
 	<div class="bg-bgColor">
-		<!-- Theme description -->
-		<p
-			class="border-b border-accent-2/10 px-5 py-4 font-custom-styled text-xs leading-relaxed text-textColor/40"
-		>
-			{description}
-		</p>
-
 		<!-- Projects -->
 		{
 			posts.map((post) => {
@@ -44,10 +36,11 @@ const [featured] = posts;
 					<a
 						href={`/posts/${post.slug}/`}
 						rel="prefetch"
-						class="group block border-b border-accent-2/10 px-5 py-4 last:border-b-0 transition-colors hover:bg-accent-2/[0.03]"
+						class="group block border-b border-accent-2/10 px-3 py-4 transition-colors last:border-b-0 hover:bg-accent-2/[0.03]"
 					>
 						<div class="mb-1 font-custom-styled text-xs font-semibold uppercase tracking-widest text-textColor/35">
-							{post.data.company && `${post.data.company} · `}{year}
+							{post.data.company && `${post.data.company} · `}
+							{year}
 						</div>
 						<h4 class="font-custom-styled text-sm font-semibold leading-snug text-accent-2 transition-colors group-hover:text-accent">
 							{post.data.title}

@@ -6,7 +6,7 @@ tags: ["archive"]
 theme: "analytics"
 company: "Commonwealth Bank"
 coverImage:
-  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/f_auto,q_auto/v1/twenty-four-assets/cbaAnalytics-landing"
+  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997522/Landing-3-CBA_hij671.png"
   alt: "Commonwealth Bank analytics dashboard"
   width: "1600"
   height: "900"

@@ -30,7 +30,7 @@ const post = defineCollection({
 				.transform((val) => new Date(val)),
 			tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
 			theme: z.enum(["fintech", "analytics", "consumer"]).optional(),
-			title: z.string().max(60),
+			title: z.string().max(80),
 			updatedDate: z
 				.string()
 				.optional()

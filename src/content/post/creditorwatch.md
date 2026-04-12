@@ -1,5 +1,5 @@
 ---
-title: "CreditorWatch: From data dump to decisioning engine"
+title: "CreditorWatch: From data dump to AI-assisted decisioning engine"
 description: "A strategic transformation that turned a fragmented platform into a cohesive decisioning engine"
 publishDate: "12 Mar 2026"
 tags: ["showcase"]
@@ -7,7 +7,7 @@ theme: "fintech"
 company: "CreditorWatch"
 outcome: "30% YoY Growth"
 coverImage:
-  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/CW-index_anmetp.png"
+  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997520/Landing-1-CW_a2zynx.png"
   alt: "CreditorWatch decisioning engine case study"
   width: "1600"
   height: "900"

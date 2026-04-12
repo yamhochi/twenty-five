@@ -7,7 +7,7 @@ theme: "consumer"
 company: "Vocal"
 coverImage:
   # src: "./vocal-landing.png"
-  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/c_fill,w_1600,h_900,g_center/f_auto,q_auto/v1/twenty-four-assets/vocal-landing"
+  src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997521/Landing-4-Vocal_n8j5an.png"
   alt: "Vocal publishing platform mobile UI"
   width: "1600"
   height: "900"
