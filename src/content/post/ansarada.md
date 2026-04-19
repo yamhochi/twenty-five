@@ -4,6 +4,10 @@ description: "Evolving a startup's design capabilities for better experimentatio
 publishDate: "14 Aug 2017"
 tags: ["archive"]
 company: "Ansarada"
+role: "Product Designer"
+service: "Product Design"
+outcome: "Design system foundation"
+postLayout: "a"
 # coverImage:
 #   src: ""
 #   alt: ""

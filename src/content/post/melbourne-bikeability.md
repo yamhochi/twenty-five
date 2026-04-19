@@ -5,6 +5,10 @@ publishDate: "02 December 2015"
 tags: ["musings"]
 theme: "analytics"
 company: "Geonext Hackathon"
+role: "Designer / Researcher"
+service: "Data Visualisation"
+outcome: "Hackathon winner"
+postLayout: "a"
 # coverImage:
 #   src: ""
 #   alt: ""

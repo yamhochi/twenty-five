@@ -3,9 +3,7 @@
 	const lightModePref = window.matchMedia("(prefers-color-scheme: light)");
 
 	function getUserPref() {
-		const storedTheme = typeof localStorage !== "undefined" && localStorage.getItem("theme");
-		// Default to dark when there is no stored preference
-		return storedTheme || "dark";
+		return "dark";
 	}
 
 	function setTheme(newTheme) {

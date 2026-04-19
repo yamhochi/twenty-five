@@ -26,3 +26,10 @@ public/creditorwatch/
 *.pem
 .cache
 .astro
+
+# designpowers
+skills/
+agents/
+hooks/
+CLAUDE.md
+.claude/settings.json

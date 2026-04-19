@@ -3,6 +3,11 @@ title: "Indoor Navigation Accessibility and Inclusivity"
 description: "A Single Sign On Solution for CBA employees working in branch"
 publishDate: "15 Jan 2014"
 tags: ["musings"]
+company: "UNSW"
+role: "Research Designer"
+service: "Research"
+outcome: "Published paper"
+postLayout: "a"
 # coverImage:
 #   src: ""
 #   alt: ""

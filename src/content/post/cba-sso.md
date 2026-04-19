@@ -4,6 +4,10 @@ description: "A Single Sign On Solution for CBA employees working in branch"
 publishDate: "03 Jun 2018"
 tags: ["archive"]
 company: "Commonwealth Bank"
+role: "Product Designer"
+service: "Product Design"
+outcome: "Branch auth solution"
+postLayout: "a"
 # coverImage:
 #   src: ""
 #   alt: ""

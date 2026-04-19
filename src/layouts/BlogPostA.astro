@@ -1,0 +1,240 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import FormattedDate from "@/components/FormattedDate.astro";
+import WebMentions from "@/components/blog/webmentions/index.astro";
+import BasePostLayout from "./BasePost.astro";
+
+interface Props {
+	post: CollectionEntry<"post">;
+}
+
+const { post } = Astro.props;
+const {
+	data: {
+		company,
+		description,
+		duration,
+		ogImage,
+		outcome,
+		publishDate,
+		role,
+		service,
+		tags,
+		title,
+		updatedDate,
+	},
+	slug,
+} = post;
+
+const socialImage = ogImage ?? `/og-image/${slug}.png`;
+const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
+const { headings, remarkPluginFrontmatter } = await post.render();
+
+const dateTimeOptions: Intl.DateTimeFormatOptions = { month: "long" };
+const tocHeadings = headings.filter((h) => h.depth <= 2);
+---
+
+<BasePostLayout meta={{ articleDate, description, ogImage: socialImage, title }}>
+	<!-- Integrated hero: flush against the nav, no gap -->
+	<div id="post-hero" class="-mx-4 sm:-mx-8">
+		<div class="px-4 sm:px-8">
+			<!-- Breadcrumb -->
+			<p class="pt-8 font-mono text-xs uppercase tracking-widest text-textColor/30">
+				<a href="/posts/" class="transition-colors hover:text-textColor/60">Work</a>
+				<span class="mx-2">/</span>
+				{company ?? title}
+			</p>
+
+			<!-- Title row with outcome callout -->
+			<div class="flex items-end gap-12 pb-10 pt-5">
+				<div class="flex-1">
+					<h1 class="title mb-4 max-w-4xl">{title}</h1>
+					<p class="max-w-xl text-base leading-relaxed text-textColor/60">{description}</p>
+					<p class="mt-3 text-sm text-textColor/40">
+						<FormattedDate date={publishDate} dateTimeOptions={dateTimeOptions} />
+						{" / "}{remarkPluginFrontmatter.minutesRead}
+					</p>
+				</div>
+				<!-- {
+					outcome && (
+						<div class="hidden shrink-0 text-right lg:block">
+							<p class="text-4xl font-semibold text-accent-2">{outcome}</p>
+							<p class="mt-1 font-mono text-xs uppercase tracking-widest text-textColor/30">
+								Outcome
+							</p>
+						</div>
+					)
+				} -->
+			</div>
+
+			<!-- Metadata strip -->
+			{
+				(company || role || duration || service || outcome) && (
+					<div class="grid grid-cols-2 divide-x divide-zinc-800 border-b border-t border-zinc-800 sm:grid-cols-4">
+						{company && (
+							<div class="py-4 pr-6">
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+									Company
+								</p>
+								<p class="text-sm font-medium text-accent-2">{company}</p>
+							</div>
+						)}
+						{role && (
+							<div class="px-6 py-4">
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+									Role
+								</p>
+								<p class="text-sm font-medium text-accent-2">{role}</p>
+							</div>
+						)}
+						{duration && (
+							<div class="px-6 py-4">
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+									Duration
+								</p>
+								<p class="text-sm font-medium text-accent-2">{duration}</p>
+							</div>
+						)}
+						{outcome && (
+							<div class="px-6 py-4">
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+									Outcome
+								</p>
+								<p class="text-sm font-medium text-accent-2">{outcome}</p>
+							</div>
+						)}
+					</div>
+				)
+			}
+		</div>
+	</div>
+
+	<!-- Two-col body: sticky left nav + article -->
+	<div class="flex items-start gap-16 py-12">
+		<!-- LEFT: sticky section nav -->
+		{
+			tocHeadings.length > 0 && (
+				<aside class="sticky top-8 hidden w-72 shrink-0 self-start lg:block">
+					<nav id="aside-toc">
+						<p class="mb-3 font-mono text-xs uppercase tracking-widest text-textColor/30">
+							Contents
+						</p>
+						<ul class="space-y-1">
+							{tocHeadings.map((h) => (
+								<li>
+									<a
+										href={`#${h.slug}`}
+										class:list={[
+											"aside-toc-link block rounded px-2 py-1.5 text-sm text-textColor/40 transition-colors hover:bg-accent/5 hover:text-accent",
+											h.depth === 3 && "pl-3 text-xs",
+										]}
+									>
+										{h.text}
+									</a>
+								</li>
+							))}
+						</ul>
+					</nav>
+
+					{tags.length > 0 && (
+						<div class="mt-8 border-t border-zinc-800 pt-6">
+							<p class="mb-2 font-mono text-xs uppercase tracking-widest text-textColor/30">Tags</p>
+							<div class="flex flex-wrap gap-1.5">
+								{tags.map((tag) => (
+									<a
+										href={`/tags/${tag}/`}
+										class="rounded-md border border-zinc-800 px-2 py-0.5 text-xs text-textColor/50 transition-colors hover:text-accent"
+									>
+										#{tag}
+									</a>
+								))}
+							</div>
+						</div>
+					)}
+				</aside>
+			)
+		}
+
+		<!-- RIGHT: article content -->
+		<article class="min-w-0 flex-1" data-pagefind-body>
+			<div
+				class="prose prose-cactus max-w-none text-gray-600 prose-headings:font-semibold prose-headings:text-accent-2 dark:text-[#ededed] sm:prose-th:before:content-none"
+			>
+				<slot />
+				<WebMentions />
+			</div>
+		</article>
+	</div>
+
+	<!-- Back to top -->
+	<button
+		aria-label="Back to Top"
+		class="z-90 fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"
+		data-show="false"
+		id="to-top-btn"
+	>
+		<svg
+			aria-hidden="true"
+			class="h-6 w-6"
+			fill="none"
+			focusable="false"
+			stroke="currentColor"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+	</button>
+</BasePostLayout>
+
+<script>
+	// Back to top
+	const scrollBtn = document.getElementById("to-top-btn") as HTMLButtonElement;
+	const targetHeader = document.getElementById("post-hero") as HTMLDivElement;
+
+	scrollBtn?.addEventListener("click", () => {
+		document.documentElement.scrollTo({ behavior: "smooth", top: 0 });
+	});
+
+	if (targetHeader && scrollBtn) {
+		new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				scrollBtn.dataset.show = (!entry.isIntersecting).toString();
+			});
+		}).observe(targetHeader);
+	}
+
+	// Active TOC highlight
+	const tocLinks = document.querySelectorAll<HTMLAnchorElement>(".aside-toc-link");
+	let activeId = "";
+
+	const setActive = (id: string) => {
+		if (id === activeId) return;
+		activeId = id;
+		tocLinks.forEach((link) => {
+			const isActive = link.getAttribute("href") === `#${id}`;
+			link.classList.toggle("text-accent", isActive);
+			link.classList.toggle("bg-accent/5", isActive);
+			link.classList.toggle("text-textColor/40", !isActive);
+		});
+	};
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) setActive(entry.target.id);
+			});
+		},
+		{ rootMargin: "-10% 0px -85% 0px", threshold: 0 },
+	);
+
+	tocLinks.forEach((link) => {
+		const id = link.getAttribute("href")?.slice(1);
+		if (id) {
+			const el = document.getElementById(id);
+			if (el) observer.observe(el);
+		}
+	});
+</script>

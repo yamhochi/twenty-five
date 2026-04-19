@@ -1,0 +1,37 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import SkipLink from "@/components/SkipLink.astro";
+import ThemeProvider from "@/components/ThemeProvider.astro";
+import Footer from "@/components/layout/Footer.astro";
+import Header from "@/components/layout/Header.astro";
+import { siteConfig } from "@/site-config";
+import type { SiteMeta } from "@/types";
+import Analytics from "@vercel/analytics/astro";
+
+interface Props {
+	meta: SiteMeta;
+}
+
+const {
+	meta: { articleDate, description = siteConfig.description, ogImage, title },
+} = Astro.props;
+---
+
+<html class="scroll-smooth" lang={siteConfig.lang}>
+	<head>
+		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+		<Analytics />
+	</head>
+	<body
+		class="left-0 top-0 z-0 mx-auto flex min-h-screen max-w-6xl flex-col bg-bgColor px-4 pt-16 text-base font-normal text-textColor antialiased sm:px-8"
+	>
+		<div class="pointer-events-none absolute left-0 right-0 top-0 -z-10 h-[480px] bg-[url('https://res.cloudinary.com/ddgt1wiwm/image/upload/v1746931698/bg-grid8_akjf7r.svg')] bg-top bg-no-repeat opacity-60"></div>
+		<ThemeProvider />
+		<SkipLink />
+		<Header />
+		<main id="main">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

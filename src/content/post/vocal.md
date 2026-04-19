@@ -5,6 +5,10 @@ publishDate: "30 Oct 2022"
 tags: ["showcase"]
 theme: "consumer"
 company: "Vocal"
+role: "Design Lead"
+service: "Product Design"
+outcome: "Trust and willingness to pay"
+postLayout: "a"
 coverImage:
   # src: "./vocal-landing.png"
   src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997521/Landing-4-Vocal_n8j5an.png"

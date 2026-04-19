@@ -5,7 +5,10 @@ publishDate: "12 Mar 2026"
 tags: ["showcase"]
 theme: "fintech"
 company: "CreditorWatch"
+role: "Lead Product Designer"
+service: "Product Design"
 outcome: "30% YoY Growth"
+postLayout: "a"
 coverImage:
   src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997520/Landing-1-CW_a2zynx.png"
   alt: "CreditorWatch decisioning engine case study"
@@ -65,15 +68,29 @@ Rather than diving straight into solutioning, I ran a structured discovery progr
 
 I mapped user behaviour against a three-stage mental model I identified as the core Jobs-to-be-Done:
 
-1. **Awareness:** Is this alert worth my attention?
-2. **Investigation:** How does this risk affect my actual exposure?
-3. **Actioning:** What do I do now, and can I do it here?
+<div class="not-prose my-8 overflow-hidden rounded-xl border border-zinc-800">
+  <div class="border-b border-zinc-800 px-5 py-2.5 text-xs font-mono uppercase tracking-widest text-zinc-500">Jobs-to-be-Done · Three-Stage Mental Model</div>
+  <div class="grid grid-cols-3 divide-x divide-zinc-800">
+    <div class="p-5">
+      <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">01 · Awareness</div>
+      <p class="text-sm leading-relaxed text-zinc-300">Is this alert worth my attention?</p>
+    </div>
+    <div class="p-5">
+      <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">02 · Investigation</div>
+      <p class="text-sm leading-relaxed text-zinc-300">How does this risk affect my actual exposure?</p>
+    </div>
+    <div class="p-5">
+      <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">03 · Actioning</div>
+      <p class="text-sm leading-relaxed text-zinc-300">What do I do now, and can I do it here?</p>
+    </div>
+  </div>
+</div>
 
 At every stage, the platform was letting users down. And the gap between where we were and where we needed to be wasn't about more features. It was about closing fundamental workflow loops.
 
 ---
 
-## Strategic decision-making: the go/no-go framework
+## Strategic decision-making
 
 ![Three strategic options matrix](https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-JTBD_oodab6.png)
 
@@ -100,7 +117,10 @@ Implementation was structured around the three-stage mental model, treating each
 
 ![Redesigned alert feed with visual risk categorisation](https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-email_wpfbhf.png)
 
-**JTBD:** *"When I receive a risk alert, help me quickly determine if it requires immediate attention or can be safely ignored, so I don't waste time on noise."*
+<div class="not-prose my-6 rounded-lg border-l-2 border-accent bg-accent/5 px-5 py-4">
+  <div class="mb-1.5 text-xs font-semibold uppercase tracking-widest text-accent">JTBD · Awareness</div>
+  <p class="text-sm italic leading-relaxed text-zinc-300">"When I receive a risk alert, help me quickly determine if it requires immediate attention or can be safely ignored, so I don't waste time on noise."</p>
+</div>
 
 **The problem:** Alerts were context-blind. Users received events, not intelligence: high volume with no guidance on what actually mattered.
 
@@ -112,9 +132,31 @@ Implementation was structured around the three-stage mental model, treating each
 
 ### Pillar 2: Investigation, from static tables to a dynamic control centre
 
-![Dynamic investigation interface with filtering and sorting](https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-filters_vs5cce.png)
+<div class="not-prose my-8 overflow-hidden rounded-xl border border-zinc-800">
+  <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-filters_vs5cce.png" alt="Dynamic investigation interface with filtering and sorting" class="w-full border-b border-zinc-800" />
+  <div class="grid grid-cols-2 divide-x divide-zinc-800">
+    <div class="p-5">
+      <div class="mb-3 text-xs font-mono uppercase tracking-widest text-zinc-500">Before</div>
+      <ul class="space-y-2 text-sm text-zinc-400">
+        <li class="flex gap-2"><span class="mt-1 shrink-0 text-zinc-600">—</span>Static tables with no filtering or sorting</li>
+        <li class="flex gap-2"><span class="mt-1 shrink-0 text-zinc-600">—</span>Adverse events sit alongside routine ABR changes with nothing to separate them</li>
+        <li class="flex gap-2"><span class="mt-1 shrink-0 text-zinc-600">—</span>Users had no choice but to export and do the work elsewhere</li>
+      </ul>
+    </div>
+    <div class="p-5">
+      <div class="mb-3 text-xs font-mono uppercase tracking-widest text-accent">After</div>
+      <ul class="space-y-2 text-sm text-zinc-300">
+        <li class="flex gap-2"><span class="mt-1 shrink-0 text-accent">—</span>Filtering by alert type, RiskScore threshold, and payment rating lets users define exactly what to investigate</li>
+        <li class="flex gap-2"><span class="mt-1 shrink-0 text-accent">—</span>Severity badges make it immediately clear what warrants action and what doesn't</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-**JTBD:** *"When a risk is flagged as material, help me reconcile it against my actual exposure and historical patterns, so I can build a case for action."*
+<div class="not-prose my-6 rounded-lg border-l-2 border-accent bg-accent/5 px-5 py-4">
+  <div class="mb-1.5 text-xs font-semibold uppercase tracking-widest text-accent">JTBD · Investigation</div>
+  <p class="text-sm italic leading-relaxed text-zinc-300">"When a risk is flagged as material, help me reconcile it against my actual exposure and historical patterns, so I can build a case for action."</p>
+</div>
 
 **The problem:** Investigating a flagged risk meant navigating read-only tables with no filtering or sorting, then leaving the platform entirely to make sense of data in Excel. Every export was a broken engagement loop.
 
@@ -130,7 +172,10 @@ Implementation was structured around the three-stage mental model, treating each
 
 ![Dashboard redesigned as a status engine](https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-Dashboard_ipyh6e.png)
 
-**JTBD:** *"Once I've confirmed a threat, give me a clear path to mitigate it, so I can protect the business's cash flow without switching to another tool."*
+<div class="not-prose my-6 rounded-lg border-l-2 border-accent bg-accent/5 px-5 py-4">
+  <div class="mb-1.5 text-xs font-semibold uppercase tracking-widest text-accent">JTBD · Actioning</div>
+  <p class="text-sm italic leading-relaxed text-zinc-300">"Once I've confirmed a threat, give me a clear path to mitigate it, so I can protect the business's cash flow without switching to another tool."</p>
+</div>
 
 **The problem:** Users would identify a risk on our platform, then leave to act on it elsewhere. A massive value leak at the last mile of the workflow.
 

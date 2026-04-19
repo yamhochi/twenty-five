@@ -5,6 +5,10 @@ publishDate: "11 Jun 2019"
 tags: ["musings"]
 theme: "consumer"
 company: "Sydney Morning Herald"
+role: "Design Lead"
+service: "Product Design"
+outcome: "Proof of concept"
+postLayout: "a"
 # coverImage:
 #   src: "./homtrust-landing"
 #   alt: "Landing page of homtrust web and mobile view"

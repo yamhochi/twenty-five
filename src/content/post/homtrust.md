@@ -5,9 +5,11 @@ publishDate: "11 Nov 2023"
 tags: ["showcase"]
 theme: "fintech"
 company: "Homstar"
-outcome: "0→1 Platform"
+role: "Design Lead"
+service: "Product Design"
+outcome: "0-1 in 8 months"
+postLayout: "a"
 coverImage:
-  # src: "./homtrust-greenfield.png"
   src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997520/Landing-2-HT_ei6cd0.png"
   alt: "Homstar B2B trust accounting platform UI"
   width: "1600"
@@ -17,7 +19,7 @@ draft: false
 
 ## Background
 
-![a screenshot of a phone with a number of items on the screen and a number of other items on the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/ov6mvtejyaarbux7ha13)
+<!-- ![a screenshot of a phone with a number of items on the screen and a number of other items on the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/ov6mvtejyaarbux7ha13) -->
 
 ![a screenshot of homtrust hero image](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-hero_kummo5)
 

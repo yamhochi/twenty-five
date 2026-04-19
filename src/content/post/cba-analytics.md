@@ -5,6 +5,10 @@ publishDate: "11 Nov 2018"
 tags: ["archive"]
 theme: "analytics"
 company: "Commonwealth Bank"
+role: "Product Designer"
+service: "Data Visualisation"
+outcome: "Data tools shipped"
+postLayout: "a"
 coverImage:
   src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997522/Landing-3-CBA_hij671.png"
   alt: "Commonwealth Bank analytics dashboard"

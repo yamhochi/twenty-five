@@ -5,6 +5,10 @@ publishDate: "15 October 2020"
 tags: ["archive"]
 theme: "consumer"
 company: "Australian Financial Review"
+role: "Product Designer"
+service: "Product Design"
+outcome: "Modernised workflows"
+postLayout: "a"
 # coverImage:
 #   src: "afr-cover.png"
 #   alt: ""
