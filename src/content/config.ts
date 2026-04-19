@@ -26,6 +26,7 @@ const post = defineCollection({
 			postLayout: z.enum(["default", "a", "b"]).optional(),
 			description: z.string().min(50).max(160),
 			draft: z.boolean().default(false),
+			gated: z.boolean().default(false),
 			ogImage: z.string().optional(),
 			outcome: z.string().optional(),
 			publishDate: z

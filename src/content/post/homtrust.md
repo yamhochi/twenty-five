@@ -1,13 +1,13 @@
 ---
-title: "Homstar B2B Trust accounting platform"
+title: "B2B Trust accounting platform"
 description: "Financial platform for short term accommodation and property managers"
 publishDate: "11 Nov 2023"
 tags: ["showcase"]
 theme: "fintech"
 company: "Homstar"
-role: "Design Lead"
-service: "Product Design"
-outcome: "0-1 in 8 months"
+role: "UI/UX lead"
+service: "End to end design"
+outcome: "0-1 delivery"
 postLayout: "a"
 coverImage:
   src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997520/Landing-2-HT_ei6cd0.png"
@@ -38,7 +38,7 @@ In response to these issues and to better meet customer needs, Thinkmill was com
 The current solution is a white-labeled third-party service that has been customized to address the specific trust accounting needs of the Short-Term Rental (STR) industry. However, despite these customisations, the platform remains insufficient. Its outdated design, limited flexibility, and susceptibility to errors fail to meet the growing demands of the business, leading to inefficiencies, data inconsistencies, and reduced client confidence.
 
 ---
-## Addressing a market gap in property management finance
+## Addressing property finance market gap
 
 ![a screen shot of Figjam showing needs](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-figjam_iwc4sn)
 
@@ -46,7 +46,7 @@ The current solution is a white-labeled third-party service that has been custom
 
 ---
 
-## Rebuilding a scalable solution from 0 to 1
+## Rebuilding a scalable solution
 
 <!-- <video autoplay="" class="w-full h-full m-0 object-contain" loop="" muted="" playsinline="">
       <source type="video/mp4" src="https://res.cloudinary.com/ddgt1wiwm/video/upload/f_auto:video,q_auto/v1/twenty-four-assets/xuf5f2ziyjsgwbohned5">
@@ -69,7 +69,7 @@ Intelligent invoice allocation systems to ensure creditors are paid accurately a
 
 ---
 
-## Design's role
+## The design direction
 
 ![a screenshot of a web page with a table showing receipting and reconciliation items](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/rskahitv1jixqyeizeno)
 
@@ -115,14 +115,16 @@ Adopting a schema-led design approach to prioritize and present information grad
 ---
 
 ## Customer validation and ensuring success
+![screenshots of dashboard](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-dashboard_uahly9)
 
 ![screenshots of Receipting and interviews](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/shihuh7sqtrebm7rpqox)
 
-![screenshots of dashboard](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-dashboard_uahly9)
+
 
 The outcome of our collective efforts was the empowerment of customers to carry out end-to-end accounting functions more effectively than before. This achievement not only rekindled trust among existing clients but also allowed the business to refocus on its growth and business goals.
 
-![screenshots of Receipting and interviews](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-feedback_dja44b)
+<!-- ![screenshots of Receipting and interviews](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/HT-feedback_dja44b) -->
+
 
 In summary, the development of Homtrust in 2023 represented a significant turning point for Homstar. It addressed pressing challenges, restored customer confidence, and facilitated the seamless integration of a specialized accounting platform within the Homstar ecosystem. The design-led, domain-driven approach, combined with a focus on simplicity and completeness, not only improved customer experiences but also positioned the business for sustained growth and success.
 

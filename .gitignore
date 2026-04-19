@@ -21,6 +21,7 @@ pnpm-debug.log*
 
 # local assets
 public/creditorwatch/
+public/mockup-*.html
 
 # misc
 *.pem

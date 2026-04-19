@@ -1,13 +1,13 @@
 ---
-title: "Visual News @ Sydney Morning Herald Hackathon"
+title: "Visual news hackathon projects"
 description: "A proof of concept to lowering barrier to visual journalism"
 publishDate: "11 Jun 2019"
 tags: ["musings"]
 theme: "consumer"
 company: "Sydney Morning Herald"
-role: "Design Lead"
-service: "Product Design"
-outcome: "Proof of concept"
+role: "Project owner"
+service: "Rapid prototyping"
+outcome: "Hackathon winner"
 postLayout: "a"
 # coverImage:
 #   src: "./homtrust-landing"

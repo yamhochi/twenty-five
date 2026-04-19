@@ -15,6 +15,7 @@ const {
 		company,
 		description,
 		duration,
+		gated,
 		ogImage,
 		outcome,
 		publishDate,
@@ -37,11 +38,14 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 
 <BasePostLayout meta={{ articleDate, description, ogImage: socialImage, title }}>
 	<!-- Integrated hero: flush against the nav, no gap -->
-	<div id="post-hero" class="-mx-4 sm:-mx-8">
+	<div
+		id="post-hero"
+		class="-mdivide-y rounded-xl border border-accent-2/5 bg-accent/5 py-12 sm:-mx-8"
+	>
 		<div class="px-4 sm:px-8">
 			<!-- Breadcrumb -->
-			<p class="pt-8 font-mono text-xs uppercase tracking-widest text-textColor/30">
-				<a href="/posts/" class="transition-colors hover:text-textColor/60">Work</a>
+			<p class="text-textColor/6 0 font-mono text-xs uppercase tracking-widest">
+				<a href="/#work" class="transition-colors hover:text-textColor/60">Work</a>
 				<span class="mx-2">/</span>
 				{company ?? title}
 			</p>
@@ -49,59 +53,59 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 			<!-- Title row with outcome callout -->
 			<div class="flex items-end gap-12 pb-10 pt-5">
 				<div class="flex-1">
-					<h1 class="title mb-4 max-w-4xl">{title}</h1>
-					<p class="max-w-xl text-base leading-relaxed text-textColor/60">{description}</p>
-					<p class="mt-3 text-sm text-textColor/40">
+					<h1 class="title-post mb-4 max-w-md">{company}</h1>
+					<p class="max-w-md text-xl leading-relaxed text-textColor/80">{title} - {description}</p>
+					<p class="mt-3 text-sm text-textColor/60">
 						<FormattedDate date={publishDate} dateTimeOptions={dateTimeOptions} />
 						{" / "}{remarkPluginFrontmatter.minutesRead}
 					</p>
 				</div>
-				<!-- {
-					outcome && (
-						<div class="hidden shrink-0 text-right lg:block">
-							<p class="text-4xl font-semibold text-accent-2">{outcome}</p>
-							<p class="mt-1 font-mono text-xs uppercase tracking-widest text-textColor/30">
-								Outcome
-							</p>
-						</div>
-					)
-				} -->
 			</div>
+
+			<div class="border-t border-accent-2/5"></div>
 
 			<!-- Metadata strip -->
 			{
 				(company || role || duration || service || outcome) && (
-					<div class="grid grid-cols-2 divide-x divide-zinc-800 border-b border-t border-zinc-800 sm:grid-cols-4">
+					<div class="flex flex-wrap gap-24 py-4">
 						{company && (
-							<div class="py-4 pr-6">
-								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+							<div>
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/60">
 									Company
 								</p>
-								<p class="text-sm font-medium text-accent-2">{company}</p>
+								<p class="text-sm font-medium text-accent">{company}</p>
 							</div>
 						)}
 						{role && (
-							<div class="px-6 py-4">
-								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+							<div>
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/60">
 									Role
 								</p>
-								<p class="text-sm font-medium text-accent-2">{role}</p>
+								<p class="text-sm font-medium text-accent">{role}</p>
 							</div>
 						)}
 						{duration && (
-							<div class="px-6 py-4">
-								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+							<div>
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/60">
 									Duration
 								</p>
-								<p class="text-sm font-medium text-accent-2">{duration}</p>
+								<p class="text-sm font-medium text-accent">{duration}</p>
+							</div>
+						)}
+						{service && (
+							<div>
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/60">
+									Service
+								</p>
+								<p class="text-sm font-medium text-accent">{service}</p>
 							</div>
 						)}
 						{outcome && (
-							<div class="px-6 py-4">
-								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/30">
+							<div>
+								<p class="mb-0.5 font-mono text-xs uppercase tracking-widest text-textColor/60">
 									Outcome
 								</p>
-								<p class="text-sm font-medium text-accent-2">{outcome}</p>
+								<p class="text-sm font-medium text-accent">{outcome}</p>
 							</div>
 						)}
 					</div>
@@ -115,9 +119,9 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 		<!-- LEFT: sticky section nav -->
 		{
 			tocHeadings.length > 0 && (
-				<aside class="sticky top-8 hidden w-72 shrink-0 self-start lg:block">
+				<aside class="sticky top-8 hidden w-80 shrink-0 self-start border-t border-accent-2/10 pt-6 lg:block">
 					<nav id="aside-toc">
-						<p class="mb-3 font-mono text-xs uppercase tracking-widest text-textColor/30">
+						<p class="mb-3 font-mono text-xs uppercase tracking-widest text-textColor/80">
 							Contents
 						</p>
 						<ul class="space-y-1">
@@ -126,7 +130,7 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 									<a
 										href={`#${h.slug}`}
 										class:list={[
-											"aside-toc-link block rounded px-2 py-1.5 text-sm text-textColor/40 transition-colors hover:bg-accent/5 hover:text-accent",
+											"aside-toc-link block rounded px-2 py-1.5 text-sm font-medium text-textColor/80 transition-colors hover:bg-accent/5 hover:text-accent",
 											h.depth === 3 && "pl-3 text-xs",
 										]}
 									>
@@ -138,8 +142,8 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 					</nav>
 
 					{tags.length > 0 && (
-						<div class="mt-8 border-t border-zinc-800 pt-6">
-							<p class="mb-2 font-mono text-xs uppercase tracking-widest text-textColor/30">Tags</p>
+						<div class="mt-8 border-t border-accent-2/10 pt-6">
+							<p class="mb-2 font-mono text-xs uppercase tracking-widest text-textColor/50">Tags</p>
 							<div class="flex flex-wrap gap-1.5">
 								{tags.map((tag) => (
 									<a
@@ -166,6 +170,70 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 			</div>
 		</article>
 	</div>
+
+	<!-- Gated access modal -->
+	{
+		gated && (
+			<div
+				id="gate-overlay"
+				class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm"
+				aria-modal="true"
+				role="dialog"
+				aria-labelledby="gate-title"
+			>
+				<div class="mx-4 w-full max-w-sm rounded-2xl border border-accent-2/10 bg-bgColor p-8 shadow-2xl">
+					<p class="text-textColor/460 mb-1 font-mono text-xs uppercase tracking-widest">
+						Restricted
+					</p>
+					<h2 id="gate-title" class="mb-2 font-custom-styled text-xl font-bold text-textColor">
+						Request access
+					</h2>
+					<p class="mb-6 text-sm leading-relaxed text-textColor/80">
+						This case study contains confidential details. Leave your email and I'll get back to you
+						shortly.
+					</p>
+
+					<form id="gate-form" novalidate>
+						<label for="gate-email" class="mb-1.5 block text-xs font-medium text-textColor/60">
+							Email address
+						</label>
+						<input
+							id="gate-email"
+							name="email"
+							type="email"
+							required
+							placeholder="you@example.com"
+							class="mb-4 w-full rounded-lg border border-accent-2/20 bg-accent/5 px-4 py-2.5 text-sm text-textColor placeholder-textColor/30 outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+						/>
+						<label for="gate-message" class="mb-1.5 block text-xs font-medium text-textColor/60">
+							Message
+						</label>
+						<textarea
+							id="gate-message"
+							name="message"
+							rows="3"
+							placeholder="Tell me a bit about yourself and what brought you here…"
+							class="mb-4 w-full resize-none rounded-lg border border-accent-2/20 bg-accent/5 px-4 py-2.5 text-sm text-textColor placeholder-textColor/30 outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+						/>
+						<button
+							type="submit"
+							id="gate-submit"
+							class="w-full rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-bgColor transition-opacity hover:opacity-90 disabled:opacity-50"
+						>
+							Request access
+						</button>
+						<p id="gate-error" class="mt-2 hidden text-xs text-red-400" />
+					</form>
+
+					<div id="gate-success" class="hidden text-center">
+						<p class="mb-1 text-2xl">✓</p>
+						<p class="text-sm font-medium text-textColor">Request sent</p>
+						<p class="mt-1 text-xs text-textColor/50">I'll review and be in touch soon.</p>
+					</div>
+				</div>
+			</div>
+		)
+	}
 
 	<!-- Back to top -->
 	<button
@@ -216,8 +284,8 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 		tocLinks.forEach((link) => {
 			const isActive = link.getAttribute("href") === `#${id}`;
 			link.classList.toggle("text-accent", isActive);
-			link.classList.toggle("bg-accent/5", isActive);
-			link.classList.toggle("text-textColor/40", !isActive);
+			link.classList.toggle("bg-textColor/10", isActive);
+			link.classList.toggle("text-textColor/80", !isActive);
 		});
 	};
 
@@ -237,4 +305,84 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 			if (el) observer.observe(el);
 		}
 	});
+</script>
+
+<script>
+	// ─── Gate configuration ──────────────────────────────────────────
+	// Create a free form at https://formspree.io and paste your endpoint below.
+	// e.g. "https://formspree.io/f/xyzabcde"
+	const FORM_ENDPOINT = "https://formspree.io/f/xqewbgoz";
+	// ────────────────────────────────────────────────────────────────
+
+	// Only activates when the gate overlay is present in the DOM
+	const overlay = document.getElementById("gate-overlay");
+	if (overlay) {
+		const form = document.getElementById("gate-form") as HTMLFormElement | null;
+		const emailInput = document.getElementById("gate-email") as HTMLInputElement | null;
+		const messageInput = document.getElementById("gate-message") as HTMLTextAreaElement | null;
+		const submitBtn = document.getElementById("gate-submit") as HTMLButtonElement | null;
+		const errorMsg = document.getElementById("gate-error");
+		const successMsg = document.getElementById("gate-success");
+
+		const showGate = () => {
+			overlay.classList.remove("hidden");
+			overlay.classList.add("flex");
+			document.body.style.overflow = "hidden";
+		};
+
+		const article = document.querySelector("article[data-pagefind-body]");
+		const headings = article ? Array.from(article.querySelectorAll("h2, h3")) : [];
+		const trigger = headings[1] ?? headings[0];
+
+		if (trigger) {
+			new IntersectionObserver(
+				(entries) => {
+					if (entries[0]?.isIntersecting) showGate();
+				},
+				{ rootMargin: "0px 0px -80% 0px", threshold: 0 },
+			).observe(trigger);
+		}
+
+		form?.addEventListener("submit", async (e) => {
+			e.preventDefault();
+			if (!emailInput?.value || !emailInput.validity.valid) {
+				if (errorMsg) {
+					errorMsg.textContent = "Please enter a valid email address.";
+					errorMsg.classList.remove("hidden");
+				}
+				return;
+			}
+
+			if (errorMsg) errorMsg.classList.add("hidden");
+			if (submitBtn) {
+				submitBtn.disabled = true;
+				submitBtn.textContent = "Sending…";
+			}
+
+			try {
+				if (FORM_ENDPOINT) {
+					await fetch(FORM_ENDPOINT, {
+						method: "POST",
+						headers: { "Content-Type": "application/json", Accept: "application/json" },
+						body: JSON.stringify({
+							email: emailInput.value,
+							message: messageInput?.value ?? "",
+							page: window.location.href,
+						}),
+					});
+				}
+				form.classList.add("hidden");
+				successMsg?.classList.remove("hidden");
+			} catch {
+				if (submitBtn) {
+					submitBtn.disabled = false;
+					submitBtn.textContent = "Request access";
+				}
+				if (errorMsg) {
+					errorMsg.textContent = "Something went wrong. Try again.";
+					errorMsg.classList.remove("hidden");
+				}
+			}
+		});
+	}
 </script>

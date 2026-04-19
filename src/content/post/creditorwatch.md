@@ -1,12 +1,12 @@
 ---
-title: "CreditorWatch: From data dump to AI-assisted decisioning engine"
+title: "From data dump to AI-assisted decisioning engine"
 description: "A strategic transformation that turned a fragmented platform into a cohesive decisioning engine"
 publishDate: "12 Mar 2026"
 tags: ["showcase"]
 theme: "fintech"
 company: "CreditorWatch"
-role: "Lead Product Designer"
-service: "Product Design"
+role: "Product design lead"
+service: "Strategic design & delivery"
 outcome: "30% YoY Growth"
 postLayout: "a"
 coverImage:
@@ -15,14 +15,17 @@ coverImage:
   width: "1600"
   height: "900"
 draft: false
+gated: true
 ---
 
 <!-- ## From Data Dump to Decisioning Engine -->
 
-![CreditorWatch dashboard showing payment defaults, risk levels and overdue invoices](https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-landing_ar33nf.png)
+<!-- ![CreditorWatch dashboard showing payment defaults, risk levels and overdue invoices](https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-landing_ar33nf.png)
 *Role: Lead Product Designer | Duration: 2 Years | Outcome: 30% YoY Growth*
 
-I led a 2-year strategic product transformation at CreditorWatch, turning a fragmented credit risk platform into a cohesive decisioning engine and sustaining **30% YoY revenue growth** through a major price increase while laying the architectural groundwork for an Agentic AI strategy.
+ -->
+
+
 
 ---
 
@@ -31,6 +34,8 @@ I led a 2-year strategic product transformation at CreditorWatch, turning a frag
 CreditorWatch is an Australian B2B credit risk intelligence platform. Its core value proposition: help businesses monitor customers and debtors for financial risk (defaults, court actions, payment behaviour) before it hits the bottom line.
 
 When I joined, the platform was at an inflection point. The core product (credit reports + alerting) represented ~70% of revenue, but it was showing cracks. Churn was rising, competitive pressure was mounting, and the internal strategy was doubling down on high-level portfolio reporting, an expensive bet I was brought in to pressure-test.
+
+I led a 2-year strategic product transformation at CreditorWatch, turning a fragmented credit risk platform into a cohesive decisioning engine and sustaining **30% YoY revenue growth** through a major price increase while laying the architectural groundwork for an Agentic AI strategy.
 
 **My role:** Product Design Lead, owning end-to-end design strategy and delivery for the core credit risk workflow.
 
@@ -216,7 +221,7 @@ We redesigned the Dashboard as a Status Engine, surfacing *"what's changed since
 
 ---
 
-## What comes next: AI readiness
+## Next up: AI readiness
 
 The last two years were spent structuring the data, categorising risk events, mapping user appetite, and building contextual investigation logic. The platform is now more AI-ready than it has ever been.
 

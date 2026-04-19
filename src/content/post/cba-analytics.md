@@ -1,13 +1,13 @@
 ---
-title: "Commonwealth Bank Australia Analytics"
-description: " Designing tools to better understand, communicate and distribute data"
+title: "Next Best Conversation performance"
+description: "Keeping pulse on the bank's advanced analytics capabilities"
 publishDate: "11 Nov 2018"
 tags: ["archive"]
 theme: "analytics"
 company: "Commonwealth Bank"
-role: "Product Designer"
-service: "Data Visualisation"
-outcome: "Data tools shipped"
+role: "Product designer"
+service: "Data visualisation / Front End development"
+outcome: "Increased staff utilisation"
 postLayout: "a"
 coverImage:
   src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997522/Landing-3-CBA_hij671.png"
@@ -26,7 +26,7 @@ The Data and Decision Science division was a group of marketers, analysts and sc
 
 ---
 
-## Current state audits, interviews and findings summary
+## Current state audits
 
 ![a black and white graphic with the words, stream of work, tactical, strategic and goals](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/cbaAnalytics-priority)
 The first few weeks was all about trying to understand different workflows and reporting needs across the department. I learned that reporting needs are not only associated with the usual business goals (eg. engagement, activation, conversion, retention etc.), but much has to do with how the organisation operates and shares knowledge across the board.

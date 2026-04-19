@@ -5,8 +5,8 @@ publishDate: "30 Aug 2016"
 tags: ["musings"]
 theme: "analytics"
 company: "NSW Government"
-role: "UX Designer"
-service: "UX Design"
+role: "Web developer"
+service: "Spatial analysis and implementation"
 outcome: "Environmental data platform"
 postLayout: "a"
 # coverImage:
