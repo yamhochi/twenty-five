@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup B — Sticky right aside</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body class="bg-[#0f1117] text-[#c9cdd4]">
+
+  <!-- Minimal dark header -->
+  <header class="border-b border-zinc-800 bg-[#0a0b0f]">
+    <div class="mx-auto max-w-6xl px-8 py-4">
+      <p class="text-xs font-mono uppercase tracking-widest text-zinc-600">CreditorWatch · 2022–2024</p>
+    </div>
+  </header>
+
+  <!-- Main two-col layout: content left (wide) + sticky aside right (narrow) -->
+  <div class="mx-auto max-w-6xl px-8 py-12">
+    <div class="flex gap-12 items-start">
+
+      <!-- LEFT: wide scrolling content -->
+      <main class="flex-1 min-w-0 space-y-20">
+
+        <!-- Title block -->
+        <div>
+          <h1 class="text-4xl font-semibold leading-tight text-white max-w-xl">
+            From data dump to AI-assisted decisioning engine
+          </h1>
+          <p class="mt-5 text-base leading-relaxed text-zinc-400 max-w-lg">
+            A 2-year platform transformation at CreditorWatch — turning a fragmented credit risk tool into a cohesive decisioning engine while sustaining 30% YoY revenue growth through a major price increase.
+          </p>
+        </div>
+
+        <!-- Full-bleed hero image -->
+        <div>
+          <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-landing_ar33nf.png"
+            alt="CreditorWatch dashboard"
+            class="w-full rounded-xl border border-zinc-800" />
+        </div>
+
+        <!-- Section: context -->
+        <div id="context" class="space-y-4">
+          <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">01 / Context</p>
+          <h2 class="text-2xl font-semibold text-white">The company and my role</h2>
+          <p class="leading-relaxed text-zinc-400 max-w-lg">
+            CreditorWatch is an Australian B2B credit risk intelligence platform. When I joined, the core product — credit reports and alerting — represented ~70% of revenue but was showing cracks. Churn was rising, competitive pressure was mounting, and the internal bet on high-level portfolio reporting was one I was brought in to pressure-test.
+          </p>
+        </div>
+
+        <!-- Section: challenge -->
+        <div id="challenge" class="space-y-4">
+          <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">02 / Challenge</p>
+          <h2 class="text-2xl font-semibold text-white">The business was straining</h2>
+          <div class="space-y-5 max-w-lg">
+            <p class="leading-relaxed text-zinc-400">
+              Growth had been driven by customer acquisition and annual price increases. But the model was beginning to break: churn was rising as customers questioned the value, and the data model underpinning the platform's moat — data reciprocity — was at risk. Dormant users don't share data.
+            </p>
+            <!-- User research pull quote -->
+            <div class="border-l-2 border-indigo-500 pl-5 py-1">
+              <p class="text-base font-medium text-white leading-snug">"Too much noise, not enough signal."</p>
+              <p class="mt-2 text-sm text-zinc-500">Users weren't asking for fewer alerts — they were asking for clearer meaning.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: approach + image -->
+        <div id="approach" class="space-y-6">
+          <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">03 / Approach</p>
+          <h2 class="text-2xl font-semibold text-white">Diagnose before build</h2>
+          <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-userfeedback_iqfu1i.png"
+            alt="Dashboard audit and behavioural data"
+            class="w-full rounded-xl border border-zinc-800" />
+          <p class="text-sm text-zinc-600">Dashboard audit findings and behavioural data — the evidence base for the strategic pivot.</p>
+          <p class="leading-relaxed text-zinc-400 max-w-lg">
+            Rather than solutioning, I ran a structured discovery program. Behavioural data showed one-off lookups and PDF downloads at all-time highs — but everything else was disproportionately under-used. Alert email click-through sat at 4%.
+          </p>
+
+          <!-- JTBD Framework -->
+          <div class="overflow-hidden rounded-xl border border-zinc-800">
+            <div class="border-b border-zinc-800 px-5 py-3 text-xs font-mono uppercase tracking-widest text-zinc-600">Jobs-to-be-Done Framework</div>
+            <div class="grid grid-cols-3 divide-x divide-zinc-800">
+              <div class="p-5">
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-400">01 · Awareness</p>
+                <p class="text-sm leading-relaxed text-zinc-300">Is this alert worth my attention?</p>
+              </div>
+              <div class="p-5">
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-400">02 · Investigation</p>
+                <p class="text-sm leading-relaxed text-zinc-300">How does this risk affect my actual exposure?</p>
+              </div>
+              <div class="p-5">
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-400">03 · Actioning</p>
+                <p class="text-sm leading-relaxed text-zinc-300">What do I do now, and can I do it here?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: execution + before/after image -->
+        <div id="execution" class="space-y-10">
+          <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">04 / Execution</p>
+          <h2 class="text-2xl font-semibold text-white">Rebuilding the risk lifecycle</h2>
+
+          <!-- Pillar 1 -->
+          <div class="space-y-4">
+            <h3 class="text-base font-semibold text-white">Pillar 1 — Awareness</h3>
+            <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-email_wpfbhf.png"
+              alt="Redesigned alert feed"
+              class="w-full rounded-xl border border-zinc-800" />
+            <div class="rounded-lg border-l-2 border-indigo-500 bg-indigo-500/5 px-5 py-4">
+              <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-indigo-400">JTBD</p>
+              <p class="text-sm italic leading-relaxed text-zinc-300">"When I receive a risk alert, help me quickly determine if it requires immediate attention or can be safely ignored."</p>
+            </div>
+            <p class="leading-relaxed text-zinc-400 max-w-lg">We redesigned the notification system with clear visual risk categorisation and a personalisation layer — users could now define their own risk appetite.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="space-y-4">
+            <h3 class="text-base font-semibold text-white">Pillar 2 — Investigation</h3>
+            <div class="overflow-hidden rounded-xl border border-zinc-800">
+              <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-filters_vs5cce.png"
+                alt="Investigation before/after"
+                class="w-full border-b border-zinc-800" />
+              <div class="grid grid-cols-2 divide-x divide-zinc-800">
+                <div class="p-5">
+                  <p class="mb-3 text-xs font-mono uppercase tracking-widest text-zinc-600">Before</p>
+                  <ul class="space-y-2 text-sm text-zinc-500">
+                    <li class="flex gap-2"><span class="shrink-0">—</span>Static tables, no filtering or sorting</li>
+                    <li class="flex gap-2"><span class="shrink-0">—</span>No way to separate signal from noise</li>
+                    <li class="flex gap-2"><span class="shrink-0">—</span>Users forced to export to Excel</li>
+                  </ul>
+                </div>
+                <div class="p-5">
+                  <p class="mb-3 text-xs font-mono uppercase tracking-widest text-indigo-400">After</p>
+                  <ul class="space-y-2 text-sm text-zinc-300">
+                    <li class="flex gap-2"><span class="shrink-0 text-indigo-400">—</span>Filter by alert type, RiskScore, payment rating</li>
+                    <li class="flex gap-2"><span class="shrink-0 text-indigo-400">—</span>Severity badges surface what warrants action</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="space-y-4">
+            <h3 class="text-base font-semibold text-white">Pillar 3 — Actioning</h3>
+            <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-Dashboard_ipyh6e.png"
+              alt="Dashboard redesigned as status engine"
+              class="w-full rounded-xl border border-zinc-800" />
+            <p class="leading-relaxed text-zinc-400 max-w-lg">Rather than forcing daily engagement, we redesigned the Dashboard as a Status Engine — surfacing "what's changed since you last logged in" in a snackable weekly check-in format.</p>
+          </div>
+        </div>
+
+        <!-- AI section -->
+        <div id="ai" class="space-y-4">
+          <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">05 / What comes next</p>
+          <h2 class="text-2xl font-semibold text-white">AI readiness</h2>
+          <img src="https://res.cloudinary.com/ddgt1wiwm/image/upload/CW-AI_tkz0zz.png"
+            alt="AI strategy evolution"
+            class="w-full rounded-xl border border-zinc-800" />
+          <p class="leading-relaxed text-zinc-400 max-w-lg">
+            The last two years structured the data, categorised risk events, mapped user appetite, and built contextual investigation logic. The platform is now more AI-ready than it has ever been.
+          </p>
+        </div>
+
+      </main>
+
+      <!-- RIGHT: sticky aside -->
+      <aside class="hidden lg:block w-64 shrink-0 sticky top-8 self-start">
+        <div class="space-y-8">
+
+          <!-- Project metadata -->
+          <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
+            <div class="border-b border-zinc-800 px-4 py-3">
+              <p class="text-xs font-mono uppercase tracking-widest text-zinc-600">Project details</p>
+            </div>
+            <div class="divide-y divide-zinc-800">
+              <div class="px-4 py-3">
+                <p class="text-xs text-zinc-600 mb-0.5">Role</p>
+                <p class="text-sm text-white">Lead Product Designer</p>
+              </div>
+              <div class="px-4 py-3">
+                <p class="text-xs text-zinc-600 mb-0.5">Duration</p>
+                <p class="text-sm text-white">2 Years</p>
+              </div>
+              <div class="px-4 py-3">
+                <p class="text-xs text-zinc-600 mb-0.5">Outcome</p>
+                <p class="text-sm text-white">30% YoY Growth</p>
+              </div>
+              <div class="px-4 py-3">
+                <p class="text-xs text-zinc-600 mb-0.5">Industry</p>
+                <p class="text-sm text-white">B2B Credit Risk</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key stats -->
+          <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
+            <div class="border-b border-zinc-800 px-4 py-3">
+              <p class="text-xs font-mono uppercase tracking-widest text-zinc-600">Impact</p>
+            </div>
+            <div class="divide-y divide-zinc-800">
+              <div class="px-4 py-4">
+                <p class="text-2xl font-semibold text-white">30%</p>
+                <p class="text-xs leading-snug text-zinc-500 mt-0.5">YoY revenue growth</p>
+              </div>
+              <div class="px-4 py-4">
+                <p class="text-2xl font-semibold text-white">15%</p>
+                <p class="text-xs leading-snug text-zinc-500 mt-0.5">WAU increase, Q1 post-release</p>
+              </div>
+              <div class="px-4 py-4">
+                <p class="text-2xl font-semibold text-white">50%+</p>
+                <p class="text-xs leading-snug text-zinc-500 mt-0.5">Engagement uplift on key pages</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section nav -->
+          <nav class="space-y-1">
+            <p class="text-xs font-mono uppercase tracking-widest text-zinc-600 mb-3">On this page</p>
+            <a href="#context" class="block py-1 text-sm text-zinc-500 hover:text-white transition-colors">Context</a>
+            <a href="#challenge" class="block py-1 text-sm text-zinc-500 hover:text-white transition-colors">Challenge</a>
+            <a href="#approach" class="block py-1 text-sm text-zinc-500 hover:text-white transition-colors">Approach</a>
+            <a href="#execution" class="block py-1 text-sm text-zinc-500 hover:text-white transition-colors">Execution</a>
+            <a href="#ai" class="block py-1 text-sm text-zinc-500 hover:text-white transition-colors">What's next</a>
+          </nav>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="border-t border-zinc-800 py-8 text-center text-xs text-zinc-600">Mockup B — Sticky right aside, wide content left</footer>
+</body>
+</html>

@@ -21,8 +21,16 @@ pnpm-debug.log*
 
 # local assets
 public/creditorwatch/
+public/mockup-*.html
 
 # misc
 *.pem
 .cache
 .astro
+
+# designpowers
+skills/
+agents/
+hooks/
+CLAUDE.md
+.claude/settings.json

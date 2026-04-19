@@ -34,6 +34,9 @@ export default {
 				".title": {
 					"@apply text-2xl font-semibold font-custom-styled text-accent-2": {},
 				},
+				".title-post": {
+					"@apply text-3xl font-semibold font-custom-styled text-accent-2": {},
+				},
 			});
 		}),
 	],

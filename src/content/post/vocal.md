@@ -4,7 +4,11 @@ description: "Empowering creators with tools to grow their audience"
 publishDate: "30 Oct 2022"
 tags: ["showcase"]
 theme: "consumer"
-company: "Vocal"
+company: "Creatd Inc"
+role: "Senior product designer"
+service: "Research and design delivery"
+outcome: "100K subscriber growth"
+postLayout: "a"
 coverImage:
   # src: "./vocal-landing.png"
   src: "https://res.cloudinary.com/ddgt1wiwm/image/upload/v1775997521/Landing-4-Vocal_n8j5an.png"
@@ -52,7 +56,7 @@ This research yielded both qualitative and quantitative insights, which were ins
 
 ---
 
-## Connecting design decisions with customer insights
+## Connecting design decisions with insights
 
 ![a cell phone with a text message on the screen and a keyboard on the side of the phone with the text message on the screen](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/dosuyisaigzswmbonrr0)
 

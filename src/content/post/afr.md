@@ -1,10 +1,14 @@
 ---
-title: "Australian Financial Review corporate subscriptions"
-description: "A bespoke opportunity for Australian Financial Review Corporate Subscriptions"
+title: "Corporate subscriptions"
+description: "A bespoke opportunity for the masthead's growth strategy"
 publishDate: "15 October 2020"
 tags: ["archive"]
 theme: "consumer"
 company: "Australian Financial Review"
+role: "Senior product designer"
+service: "End to end delivery"
+outcome: "Modernised legacy workflows"
+postLayout: "a"
 # coverImage:
 #   src: "afr-cover.png"
 #   alt: ""
@@ -53,7 +57,7 @@ Acknowledging that things are messy, ambiguous or even hidden at this point. Thi
 
 ---
 
-## Customer feedback, risks, opportunities & roadmap
+## Opportunities & roadmap
 
 ![A diagram showing 4 quardrants of opportunities anaysis - risks and costs, opportunities, likely and unlikely](https://res.cloudinary.com/ddgt1wiwm/image/upload/f_auto,q_auto/v1/twenty-four-assets/afr-opportunities.png)
 

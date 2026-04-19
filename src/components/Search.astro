@@ -2,31 +2,61 @@
 // Heavy inspiration taken from Astro Starlight -> https://github.com/withastro/starlight/blob/main/packages/starlight/components/Search.astro
 
 import "@pagefind/default-ui/css/ui.css";
+
+interface Props {
+	size?: "sm" | "lg";
+}
+
+const { size = "sm" } = Astro.props;
 ---
 
 <site-search class="ms-auto" id="search">
-	<button
-		class="flex h-9 w-9 items-center justify-center rounded-md ring-zinc-400 transition-all hover:ring-2"
-		data-open-modal
-		disabled
-	>
-		<svg
-			aria-label="search"
-			class="h-7 w-7"
-			fill="none"
-			height="16"
-			stroke="currentColor"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			stroke-width="1.5"
-			viewBox="0 0 24 24"
-			width="16"
-			xmlns="http://www.w3.org/2000/svg"
+	{size === "sm" ? (
+		<button
+			class="flex h-6 w-6 items-center justify-center rounded-md ring-zinc-400 transition-all hover:ring-2"
+			data-open-modal
+			disabled
 		>
-			<path d="M0 0h24v24H0z" stroke="none"></path>
-			<path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6"></path>
-		</svg>
-	</button>
+			<svg
+				aria-label="search"
+				class="h-4 w-4 text-textColor/60"
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="1.5"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path d="M0 0h24v24H0z" stroke="none"></path>
+				<path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6"></path>
+			</svg>
+		</button>
+	) : (
+		<button
+			class="flex items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800/50 px-3 py-1.5 text-sm text-textColor/40 transition-colors hover:border-zinc-600 hover:text-textColor/70"
+			data-open-modal
+			disabled
+		>
+			<svg
+				aria-hidden="true"
+				class="h-3.5 w-3.5 shrink-0"
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="1.5"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path d="M0 0h24v24H0z" stroke="none"></path>
+				<path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6"></path>
+			</svg>
+			<span>Search</span>
+			<kbd class="ml-1 rounded border border-zinc-600 px-1.5 py-0.5 font-mono text-xs text-textColor/30">/</kbd>
+		</button>
+	)}
+
 	<dialog
 		aria-label="search"
 		class="h-full max-h-full w-full max-w-full border border-zinc-400 bg-bgColor shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md"

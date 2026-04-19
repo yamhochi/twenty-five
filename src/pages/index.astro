@@ -42,9 +42,9 @@ const themes = [
 	<!-- Bio -->
 	<section>
 		<span
-			class="mb-5 inline-block rounded-full border border-accent/20 bg-accent/5 px-3 py-1 font-custom-styled text-xs font-bold uppercase tracking-[1.2px] text-accent"
+			class="mb-5 inline-block rounded-md border border-accent/20 bg-accent/5 px-3 py-1 font-custom-styled text-xs font-bold uppercase tracking-[1.2px] text-accent"
 		>
-			Lead Product Designer · B2B · FinTech
+			Design strategist · B2B · FinTech
 		</span>
 		<p class="mt-5 font-custom-styled text-[20px] font-medium leading-[2] text-textColor">
 			👋🏻 I'm Andie, I help software teams figure out where their customers struggle and where new
@@ -60,7 +60,7 @@ const themes = [
 	</section>
 
 	<!-- Theme sections -->
-	<div class="mt-12 flex flex-col gap-16">
+	<div id="work" class="mt-12 flex flex-col gap-16">
 		{
 			themes.map((theme) => (
 				<section aria-label={theme.label}>

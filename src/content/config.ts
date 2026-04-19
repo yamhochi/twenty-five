@@ -8,7 +8,7 @@ function removeDupsAndLowerCase(array: string[]) {
 }
 
 const post = defineCollection({
-	schema: ({ image }) =>
+	schema: () =>
 		z.object({
 			coverImage: z
 				.object({
@@ -20,8 +20,13 @@ const post = defineCollection({
 				})
 				.optional(),
 			company: z.string().optional(),
+			role: z.string().optional(),
+			duration: z.string().optional(),
+			service: z.string().optional(),
+			postLayout: z.enum(["default", "a", "b"]).optional(),
 			description: z.string().min(50).max(160),
 			draft: z.boolean().default(false),
+			gated: z.boolean().default(false),
 			ogImage: z.string().optional(),
 			outcome: z.string().optional(),
 			publishDate: z
