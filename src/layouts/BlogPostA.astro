@@ -33,6 +33,7 @@ const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { headings, remarkPluginFrontmatter } = await post.render();
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = { month: "long" };
+const formEndpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT ?? "";
 const tocHeadings = headings.filter((h) => h.depth <= 2);
 ---
 
@@ -176,6 +177,7 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 		gated && (
 			<div
 				id="gate-overlay"
+				data-endpoint={formEndpoint}
 				class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm"
 				aria-modal="true"
 				role="dialog"
@@ -314,15 +316,10 @@ const tocHeadings = headings.filter((h) => h.depth <= 2);
 </script>
 
 <script>
-	// ─── Gate configuration ──────────────────────────────────────────
-	// Create a free form at https://formspree.io and paste your endpoint below.
-	// e.g. "https://formspree.io/f/xyzabcde"
-	const FORM_ENDPOINT = "https://formspree.io/f/xqewbgoz";
-	// ────────────────────────────────────────────────────────────────
-
 	// Only activates when the gate overlay is present in the DOM
 	const overlay = document.getElementById("gate-overlay");
 	if (overlay) {
+		const FORM_ENDPOINT = overlay.dataset.endpoint ?? "";
 		const form = document.getElementById("gate-form") as HTMLFormElement | null;
 		const emailInput = document.getElementById("gate-email") as HTMLInputElement | null;
 		const messageInput = document.getElementById("gate-message") as HTMLTextAreaElement | null;

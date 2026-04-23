@@ -1,6 +1,7 @@
 ---
 import { menuLinks } from "@/site-config";
-import Search from "../Search.astro";
+import AskAndie from "../AskAndie.astro";
+// import Search from "../Search.astro";
 import ThemeToggle from "../ThemeToggle.astro";
 
 const url = new URL(Astro.request.url);
@@ -54,7 +55,10 @@ const url = new URL(Astro.request.url);
 			}
 		</nav>
 	</div>
-	<Search size="lg" />
+	<div class="ms-auto flex items-center gap-2">
+		<AskAndie />
+		<!-- <Search size="sm" /> -->
+	</div>
 	<!-- <ThemeToggle /> -->
 	<mobile-button>
 		<button

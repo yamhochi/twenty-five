@@ -25,6 +25,8 @@ public/mockup-*.html
 
 # misc
 *.pem
+README.original.md
+README.md
 .cache
 .astro
 
